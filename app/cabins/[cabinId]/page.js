@@ -70,7 +70,7 @@ async function Page({ params }) {
       </div>
 
       <div>
-        <h2 className="text-5xl font-semibold text-center">
+        <h2 className="text-center text-5xl font-semibold">
           Reserve today. Pay on arrival.
         </h2>
       </div>

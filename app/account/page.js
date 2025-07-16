@@ -4,7 +4,7 @@ export const metadata = {
 
 function Page() {
   return (
-    <h2 className="text-accent-400 font-semibold text-2xl mb-7 ">
+    <h2 className="mb-7 text-2xl font-semibold text-accent-400 ">
       welcome %guest%
     </h2>
   );

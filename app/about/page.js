@@ -14,7 +14,7 @@ export const experimental_ppr = true;
 
 function Page() {
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 items-center">
+    <div className="grid grid-cols-5 items-center gap-x-24 gap-y-32">
       <div className="col-span-3">
         <h1 className={styles.h1}>Welcome to The Wild Oasis</h1>
         <div className="space-y-8">
@@ -51,7 +51,7 @@ function Page() {
         className="col-span-2"
         quality={80}
       />
-      <div className="col-span-2 relative aspect-square">
+      <div className="relative col-span-2 aspect-square">
         <Image
           src="/about-2.jpg"
           alt="Family that manages"
