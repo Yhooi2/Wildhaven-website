@@ -3,5 +3,4 @@ node_modules
 .git
 *.log
 package-lock.json
-.trunk
 public 
