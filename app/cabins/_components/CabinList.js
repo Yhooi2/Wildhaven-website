@@ -9,15 +9,15 @@ async function CabinList({ filter }) {
 
   if (filter !== "all") {
     switch (filter) {
-      case "3":
+      case "small":
         cabins = cabins.filter((cabin) => cabin.maxCapacity <= 3);
         break;
-      case "6":
+      case "medium":
         cabins = cabins.filter(
           (cabin) => cabin.maxCapacity >= 4 && cabin.maxCapacity <= 6
         );
         break;
-      case "12":
+      case "large":
         cabins = cabins.filter((cabin) => cabin.maxCapacity >= 7);
         break;
     }
