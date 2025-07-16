@@ -16,13 +16,13 @@ function CabinCard({ cabin }) {
           className="border-r border-primary-800 object-cover"
         />
       </div>
-      <div className="flex-grow">
+      <div className="grow">
         <div className="bg-primary-950 px-7 pb-4 pt-5">
           <h3 className="mb-3 text-2xl font-semibold text-accent-500">
             Cabin {name}
           </h3>
           <div className="mb-2 flex items-center">
-            <UsersIcon className="h-5 w-5 text-primary-500" />
+            <UsersIcon className="size-5 text-primary-500" />
             <p className="text-lg text-primary-200">
               For up to <span className="font-bold">{maxCapacity}</span> guests
             </p>
