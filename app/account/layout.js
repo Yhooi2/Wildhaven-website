@@ -2,7 +2,7 @@ import SideMenu from "./SideMenu";
 
 function Layout({ children }) {
   return (
-    <div className="grid grid-cols-[16rem_1fr] gap-12 h-full">
+    <div className="grid h-full grid-cols-[16rem_1fr] gap-12">
       <SideMenu />
       {children}
     </div>

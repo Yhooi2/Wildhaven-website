@@ -27,9 +27,9 @@ async function Page({ params }) {
   const { cabinId } = await params;
   const cabin = await getCabin(cabinId);
   return (
-    <div className="max-w-6xl mx-auto mt-8">
-      <div className="grid grid-cols-[3fr_4fr] gap-20 text-lg mb-24 py-3 p-10 border border-l-0 border-primary-800">
-        <div className="relative scale-110 -translate-x-3 ">
+    <div className="mx-auto mt-8 max-w-6xl">
+      <div className="mb-24 grid grid-cols-[3fr_4fr] gap-20 border border-l-0 border-primary-800 p-10 py-3 text-lg">
+        <div className="relative -translate-x-3 scale-110 ">
           <Image
             src={cabin.image}
             alt={`${cabin.name} image`}
@@ -39,8 +39,8 @@ async function Page({ params }) {
           />
         </div>
         <div>
-          <h3 className="text-7xl text-accent-100 -translate-x-64 w-[150%] p-6 pb-1 bg-primary-950">{`Cabin ${cabin.name}`}</h3>
-          <p className="text-primary-300 mb-10">
+          <h3 className="w-[150%] -translate-x-64 bg-primary-950 p-6 pb-1 text-7xl text-accent-100">{`Cabin ${cabin.name}`}</h3>
+          <p className="mb-10 text-primary-300">
             <TextExpander>{cabin.description}</TextExpander>
           </p>
           <ul className="flex flex-col gap-4">

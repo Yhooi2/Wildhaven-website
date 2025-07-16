@@ -18,11 +18,11 @@ function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${josefinSans.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col antialiased relative`}
+        className={`${josefinSans.className} relative flex min-h-screen flex-col bg-primary-950 text-primary-100 antialiased`}
       >
         <Header />
-        <div className="flex-1 px-8 py-12 grid">
-          <main className="max-w-7xl mx-auto w-full">{children}</main>
+        <div className="grid flex-1 px-8 py-12">
+          <main className="mx-auto w-full max-w-7xl">{children}</main>
         </div>
       </body>
     </html>

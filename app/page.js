@@ -13,13 +13,13 @@ export default function Page() {
         className="object-cover object-top"
         alt="Montains and forests whith two cabins"
       />
-      <div className="relative z-10 text-center mt-24">
-        <h1 className="text-7xl text-primary-50 tracking-tight font-normal mb-10">
+      <div className="relative z-10 mt-24 text-center">
+        <h1 className="mb-10 text-7xl font-normal tracking-tight text-primary-50">
           Welcome to paradise
         </h1>
         <Link
           href="/cabins"
-          className="bg-accent-500 px-8 py-6 text-primary-800 text-lg"
+          className="bg-accent-500 px-8 py-6 text-lg text-primary-800"
         >
           Explore luxery cabins
         </Link>
