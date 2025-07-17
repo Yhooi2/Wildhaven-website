@@ -6,9 +6,7 @@ import { Suspense } from "react";
 export const metadata = {
   title: "About",
 };
-const styles = {
-  h1: "text-3xl text-accent-400 font-medium mb-10",
-};
+const styleH1 = "text-3xl text-accent-400 font-medium mb-10";
 
 export const experimental_ppr = true;
 
@@ -16,7 +14,7 @@ function Page() {
   return (
     <div className="grid grid-cols-5 items-center gap-x-24 gap-y-32">
       <div className="col-span-3">
-        <h1 className={styles.h1}>Welcome to The Wild Oasis</h1>
+        <h1 className={styleH1}>Welcome to The Wild Oasis</h1>
         <div className="space-y-8">
           <p>
             Where nature&apos;s beauty and comfortable living blend seamlessly.
@@ -60,7 +58,7 @@ function Page() {
         />
       </div>
       <div className="col-span-3">
-        <h1 className={styles.h1}>Managed by our family since 1962</h1>
+        <h1 className={styleH1}>Managed by our family since 1962</h1>
 
         <div className="space-y-8">
           <p>

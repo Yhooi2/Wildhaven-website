@@ -1,18 +1,17 @@
 import Link from "next/link";
-const linksStyle = "hover:text-accent-400 transition-colors";
 
 function Navigation() {
   return (
     <nav className="z-10 text-xl">
       <ul className="flex items-center gap-16">
-        <li className={linksStyle}>
+        <li className="transition-colors hover:text-accent-400">
           <Link href="/cabins ">Cabins</Link>
         </li>
 
-        <li className={linksStyle}>
+        <li className="transition-colors hover:text-accent-400">
           <Link href="/about ">About</Link>
         </li>
-        <li className={linksStyle}>
+        <li className="transition-colors hover:text-accent-400">
           <Link href="/account ">Guest area</Link>
         </li>
       </ul>

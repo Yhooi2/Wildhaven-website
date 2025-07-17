@@ -7,12 +7,12 @@ import {
 } from "@heroicons/react/24/solid";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Icon from "../_components/ui/Icon";
 
 const styles = {
   nav: "border-r border-primary-900",
   ul: "flex flex-col gap-4 text-lg h-full font-semibold text-primary-200",
   link: "hover:bg-primary-900 hover:text-primary-100 py-3 px-5 transition-colors flex items-center gap-4",
-  icon: "w-5 h-5 text-primary-600",
 };
 
 const navItems = [
@@ -54,7 +54,7 @@ function SideMenu() {
         {
           <li className="mt-auto ">
             <button href="/logout" className={styles.link + " w-full"}>
-              <ArrowRightStartOnRectangleIcon className={styles.icon} />
+              <Icon as={ArrowRightStartOnRectangleIcon} />
               Sign out
             </button>
           </li>

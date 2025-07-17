@@ -1,15 +1,16 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { Button } from "./ui";
 
 export default function BackButton({ children }) {
   const router = useRouter();
   return (
-    <button
+    <Button
       onClick={() => router.back()}
-      className="bg-accent-600 px-6 py-3 text-primary-800 transition-colors hover:bg-accent-700  "
+      className="transition-colors hover:bg-accent-700"
     >
       {children}
-    </button>
+    </Button>
   );
 }

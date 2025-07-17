@@ -1,12 +1,13 @@
 import { UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
+import { Container, Text, Icon } from "../../_components/ui";
 
 function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (
-    <div className="flex border border-primary-800">
+    <Container className="flex">
       <div className="relative flex-1">
         <Image
           src={image}
@@ -21,11 +22,11 @@ function CabinCard({ cabin }) {
           <h3 className="mb-3 text-2xl font-semibold text-accent-500">
             Cabin {name}
           </h3>
-          <div className="mb-2 flex items-center">
-            <UsersIcon className="size-5 text-primary-500" />
-            <p className="text-lg text-primary-200">
+          <div className="mb-2 flex items-center gap-2">
+            <Icon as={UsersIcon} />
+            <Text>
               For up to <span className="font-bold">{maxCapacity}</span> guests
-            </p>
+            </Text>
           </div>
           <p className="flex items-baseline justify-end gap-3">
             {discount > 0 ? (
@@ -52,7 +53,7 @@ function CabinCard({ cabin }) {
           </Link>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 

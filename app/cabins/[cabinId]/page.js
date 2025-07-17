@@ -3,11 +3,9 @@ import { getCabin, getCabins } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import TextExpander from "@/app/_components/TextExpander";
+import { Icon, Container } from "@/app/_components/ui";
 
-const styles = {
-  li: "flex items-center gap-3",
-  icon: "w-5 h-5 text-primary-600",
-};
+const styleLi = "flex items-center gap-3";
 
 export async function generateMetadata({ params }) {
   const { cabinId } = await params;
@@ -26,9 +24,10 @@ export async function generateStaticParams() {
 async function Page({ params }) {
   const { cabinId } = await params;
   const cabin = await getCabin(cabinId);
+
   return (
     <div className="mx-auto mt-8 max-w-6xl">
-      <div className="mb-24 grid grid-cols-[3fr_4fr] gap-20 border border-l-0 border-primary-800 p-10 py-3 text-lg">
+      <Container className="mb-24 grid grid-cols-[3fr_4fr] gap-20 border-l-0 p-10 py-3 text-lg">
         <div className="relative -translate-x-3 scale-110 ">
           <Image
             src={cabin.image}
@@ -44,30 +43,28 @@ async function Page({ params }) {
             <TextExpander>{cabin.description}</TextExpander>
           </p>
           <ul className="flex flex-col gap-4">
-            <li className={styles.li}>
-              <UsersIcon className={styles.icon} />
+            <li className={styleLi}>
+              <Icon as={UsersIcon} />
               <span>For up to </span>
               <span className="font-bold">{cabin.maxCapacity} </span>
               <span>guests.</span>
             </li>
-            <li className={styles.li}>
-              <MapPinIcon className={styles.icon} />
-              <span>{cabin.address}</span>
+            <li className={styleLi}>
+              <Icon as={MapPinIcon} />
               <span>
                 Located in the heart of the{" "}
                 <span className="font-bold">Dolomites</span> (Italy)
               </span>
             </li>
-            <li className={styles.li}>
-              <EyeSlashIcon className={styles.icon} />
-              <span>{cabin.address}</span>
-              <span className="text-lg">
+            <li className={styleLi}>
+              <Icon as={EyeSlashIcon} />
+              <span>
                 Privacy <span className="font-bold">100%</span> guaranteed
               </span>
             </li>
           </ul>
         </div>
-      </div>
+      </Container>
 
       <div>
         <h2 className="text-center text-5xl font-semibold">

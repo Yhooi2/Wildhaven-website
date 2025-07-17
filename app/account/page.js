@@ -1,13 +1,11 @@
+import { SectionHeading } from "../_components/ui";
+
 export const metadata = {
   title: "Welcome",
 };
 
 function Page() {
-  return (
-    <h2 className="mb-7 text-2xl font-semibold text-accent-400 ">
-      welcome %guest%
-    </h2>
-  );
+  return <SectionHeading className="mb-7">welcome %guest%</SectionHeading>;
 }
 
 export default Page;

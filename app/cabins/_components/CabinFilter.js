@@ -1,8 +1,9 @@
 import FilterButton from "./FilterButton";
+import { Container } from "../../_components/ui";
 
 function CabinFilter({ filter }) {
   return (
-    <div className="mb-8 flex justify-end border border-primary-800">
+    <Container className="mb-8 flex justify-end">
       <FilterButton capacity="all" active={filter}>
         All cabins
       </FilterButton>
@@ -15,7 +16,7 @@ function CabinFilter({ filter }) {
       <FilterButton capacity="large" active={filter}>
         Large (7&ndash;12 guests)
       </FilterButton>
-    </div>
+    </Container>
   );
 }
 
