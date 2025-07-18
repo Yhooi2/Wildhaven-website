@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/app/_components/ui";
-import Input from "@/app/_components/ui/Input";
+import { Input } from "@/app/_components/ui";
 import { useState } from "react";
 
 function UpdateProfileForm({ children }) {

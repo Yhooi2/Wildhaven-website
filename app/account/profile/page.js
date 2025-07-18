@@ -19,7 +19,7 @@ function page() {
           defaultCountry={nationality}
           name="country"
           id="country"
-          className="w-full px-5 py-3 text-primary-800 shadow-sm disabled:bg-gray-600 disabled:text-gray-400"
+          className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm disabled:bg-gray-600 disabled:text-gray-400"
         />
       </UpdateProfileForm>
     </div>
