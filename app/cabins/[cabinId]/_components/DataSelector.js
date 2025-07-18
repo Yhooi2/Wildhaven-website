@@ -1,7 +1,7 @@
 "use client";
 import { isWithinInterval } from "date-fns";
-import { DayPicker } from "react-day-picker";
 import { useState } from "react";
+import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
 function isAlreadyBooked(range, datesArr) {
@@ -14,17 +14,13 @@ function isAlreadyBooked(range, datesArr) {
   );
 }
 
-function DateSelector() {
+function DateSelector({ minBookingLength, maxBookingLength, bookedDates }) {
   // CHANGE
   const regularPrice = 23;
   const discount = 23;
   const numNights = 23;
   const cabinPrice = 23;
   const [range, setRange] = useState({ from: null, to: null });
-
-  // SETTINGS
-  const minBookingLength = 1;
-  const maxBookingLength = 23;
 
   const resetRange = () => {
     setRange({ from: null, to: null });
@@ -33,13 +29,13 @@ function DateSelector() {
   const classNames = {
     day: "text-center text-primary-300",
     day_button:
-      "hover:bg-accent-600 hover:rounded-full text-primary-300 w-8 h-8",
-    selected: "bg-accent-500 rounded-full ",
-    disabled: "text-accent-600 opacity-50",
-    range_start: "bg-accent-600 rounded-full",
-    range_end: "bg-accent-600 rounded-full",
+      "hover:bg-accent-600 hover:rounded-full  hover:text-primary-800 text-primary-300 w-8 h-8",
+    selected: "bg-accent-500 rounded-full text-primary-800",
+    disabled: "text-accent-600 opacity-50 cursor-not-allowed",
+    range_start: "bg-accent-600 text-primary-800 rounded-full",
+    range_end: "bg-accent-600 text-primary-800 rounded-full",
     range_middle: "bg-accent-500",
-    month_caption: "font-bold text-lg text-primary-200 text-center",
+    month_caption: "font-bold text-lg text-primary-200 text-center mb-3",
     month_grid: "",
     chevron: "fill-primary-200",
     today: "font-bold text-accent-600",
@@ -50,7 +46,7 @@ function DateSelector() {
   return (
     <div className="flex flex-col justify-between">
       <DayPicker
-        className="place-self-center pt-12"
+        className="place-self-center pt-10"
         mode="range"
         selected={range}
         onSelect={setRange}
@@ -58,7 +54,7 @@ function DateSelector() {
         max={maxBookingLength}
         startMonth={new Date()}
         endMonth={new Date(new Date().getFullYear() + 5, 11)}
-        // hidden={[{ before: new Date() }]}
+        disabled={[{ before: new Date() }]}
         captionLayout="dropdown"
         hideNavigation
         numberOfMonths={2}

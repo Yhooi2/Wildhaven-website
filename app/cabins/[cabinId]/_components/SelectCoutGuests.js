@@ -1,5 +1,4 @@
-function SelectCoutGuests() {
-  const maxCapacity = 10;
+function SelectCoutGuests({ maxCapacity }) {
   return (
     <div className="space-y-2">
       <label htmlFor="numGuests">How many guests?</label>

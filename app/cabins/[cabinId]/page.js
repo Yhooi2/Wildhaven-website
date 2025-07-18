@@ -1,9 +1,11 @@
 import { getCabin, getCabins } from "@/app/_lib/data-service";
 
-import { SectionHeading } from "@/app/_components/ui";
+import { SectionHeading, Spinner } from "@/app/_components/ui";
+import { Suspense } from "react";
 import Cabin from "./_components/Cabin";
 import Reservation from "./_components/Reservation";
 
+export const experimental_ppr = true;
 export async function generateMetadata({ params }) {
   const { cabinId } = await params;
   const cabin = await getCabin(cabinId);
@@ -29,7 +31,9 @@ async function Page({ params }) {
         <SectionHeading className="text-center !text-5xl">
           Reserve {cabin.name} today. Pay on arrival.
         </SectionHeading>
-        <Reservation />
+        <Suspense fallback={<Spinner />}>
+          <Reservation cabin={cabin} />
+        </Suspense>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { Button } from "@/app/_components/ui";
 import SelectCoutGuests from "./SelectCoutGuests";
 
-function ReservationForm() {
+function ReservationForm({ maxCapacity }) {
   return (
     <div>
       <div className="bg-primary-800 px-16 py-3 text-primary-300">
@@ -9,7 +9,7 @@ function ReservationForm() {
       </div>
 
       <form className="flex flex-col justify-between gap-5 bg-primary-900 px-16 py-10">
-        <SelectCoutGuests />
+        <SelectCoutGuests maxCapacity={maxCapacity} />
         <div className="space-y-2">
           <label htmlFor="observations">
             Anything we should know about your stay?
