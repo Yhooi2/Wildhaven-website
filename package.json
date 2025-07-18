@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@modelcontextprotocol/sdk": "^1.16.0",
     "@supabase/supabase-js": "^2.51.0",
     "date-fns": "^4.1.0",
+    "mcp-shrimp-task-manager": "^1.0.21",
     "next": "^15.4.2-canary.0",
     "react": "19.1.0",
     "react-day-picker": "^9.8.0",

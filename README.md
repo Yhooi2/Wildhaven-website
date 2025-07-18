@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wildhaven Website
 
-## Getting Started
+A modern website for Wildhaven cabins and accommodations.
 
-First, run the development server:
+## Features
+
+- Next.js 15 with React 19
+- Supabase integration
+- Responsive design with Tailwind CSS
+- Cabin booking system
+- User account management
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## MCP Tools Setup
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project includes Model Context Protocol (MCP) tools for enhanced development experience:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Context7**: Access up-to-date library documentation
+- **TaskManager**: Project task management system
 
-## Learn More
+See [MCP_SETUP.md](./MCP_SETUP.md) for detailed configuration and usage instructions.
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: Next.js 15.4.2-canary.0
+- **React**: 19.1.0
+- **Styling**: Tailwind CSS
+- **Database**: Supabase
+- **Icons**: Heroicons
+- **Date Handling**: date-fns
+- **Date Picker**: react-day-picker
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/
+├── _components/     # Shared components
+├── _lib/           # Utilities and services
+├── _styles/        # Global styles
+├── about/          # About page
+├── account/        # User account pages
+├── cabins/         # Cabin listing and details
+└── layout.js       # Root layout
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
