@@ -15,6 +15,7 @@ async function Reservation({ cabin }) {
         minBookingLength={settings.minBookingLength}
         maxBookingLength={settings.maxBookingLength}
         bookedDates={bookedDates}
+        cabin={cabin}
       />
       <ReservationForm maxCapacity={cabin.maxCapacity} />
     </Container>

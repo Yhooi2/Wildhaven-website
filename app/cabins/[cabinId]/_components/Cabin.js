@@ -13,6 +13,8 @@ function Cabin({ cabin }) {
           src={cabin.image}
           alt={`${cabin.name} image`}
           fill
+          priority
+          quality={90}
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

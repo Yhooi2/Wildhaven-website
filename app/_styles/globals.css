@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DayPicker range text color override */
+.rdp-root .rdp-day_button[data-range-start],
+.rdp-root .rdp-day_button[data-range-end],
+.rdp-root .rdp-day_button[data-range-middle] {
+  color: #2c3d4f !important; /* primary-800 */
+}
+
 @layer components {
   /* .spinner {
     margin: 3.2rem auto 1.6rem;
