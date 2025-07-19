@@ -139,6 +139,28 @@ async function runTests() {
       importsOk = false;
   }
 
+  // Проверяем index файлы для экспорта компонентов
+  if (fs.existsSync("app/_features/reservation/components/index.js")) {
+    if (
+      !checkImports("app/_features/reservation/components/index.js", [
+        "export { default as DateSelector }",
+        "export { default as Reservation }",
+      ])
+    )
+      importsOk = false;
+  }
+
+  // Проверяем главный index файл фичи
+  if (fs.existsSync("app/_features/reservation/index.js")) {
+    if (
+      !checkImports("app/_features/reservation/index.js", [
+        'export * from "./components"',
+        'export * from "./context"',
+      ])
+    )
+      importsOk = false;
+  }
+
   // Тест 5: Проверка линтера
   console.log("\n🔍 Проверка линтера:");
   const linterOk = await checkLinter();
