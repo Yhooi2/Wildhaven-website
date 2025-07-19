@@ -1,5 +1,5 @@
 import { Container } from "@/app/_components/ui";
-import { getBookedDatesByCabinId, getSettings } from "@/app/_lib/data-service";
+import { getBookedDatesByCabinId, getSettings } from "@/app/_api/data-service";
 import DataSelector from "./DataSelector";
 import ReservationForm from "./ReservationForm";
 

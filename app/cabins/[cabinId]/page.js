@@ -1,4 +1,4 @@
-import { getCabin, getCabins } from "@/app/_lib/data-service";
+import { getCabin, getCabins } from "@/app/_api/data-service";
 
 import { SectionHeading, Spinner } from "@/app/_components/ui";
 import { Suspense } from "react";
