@@ -1,8 +1,8 @@
 "use client";
-import { createContext, useContext } from "react";
+import { createContext } from "react";
 import { useState } from "react";
 
-const ReservationContext = createContext();
+export const ReservationContext = createContext();
 
 const initialState = {
   from: undefined,
@@ -17,8 +17,4 @@ export default function ReservationProvider({ children }) {
       {children}
     </ReservationContext.Provider>
   );
-}
-
-export function useReservation() {
-  return useContext(ReservationContext);
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useReservation } from "@/app/_context/RecervationProvider";
+import { useReservation } from "../hooks";
 import { differenceInDays } from "date-fns";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
