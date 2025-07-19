@@ -1,7 +1,8 @@
 import { Suspense } from "react";
-import Spinner from "../_components/ui/Spinner";
-import { CabinList, CabinFilter } from "./_components";
 import { Text } from "../_components/ui";
+import Spinner from "../_components/ui/Spinner";
+import { ReservationRemainder } from "../_features/reservation/components";
+import { CabinFilter, CabinList } from "./_components";
 
 export const metadata = {
   title: "Cabins",
@@ -29,6 +30,7 @@ async function Page({ searchParams }) {
       <CabinFilter filter={filter} />
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
+        <ReservationRemainder />
       </Suspense>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-import { useReservation } from "../hooks";
+import { useReservation } from "../context";
 import { differenceInDays } from "date-fns";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
@@ -11,26 +11,25 @@ import {
 import { PriceDisplay, BookingSummary, ClearButton } from "./ui";
 import { calculatePricing } from "../utils";
 
-// Main component
 function DateSelector({
   minBookingLength,
   maxBookingLength,
   bookedDates,
   cabin,
 }) {
-  const { range, setRange } = useReservation();
+  const { range, setRange, resetRange, setCabinId } = useReservation();
 
   const numNights =
     range?.from && range?.to ? differenceInDays(range.to, range.from) : 0;
   const pricing = calculatePricing(cabin, numNights);
 
-  const handleClearRange = () => {
-    setRange({ from: undefined, to: undefined });
+  const handleSelect = (range) => {
+    setRange(range);
+    setCabinId(cabin.id);
   };
 
   return (
     <div className="flex flex-col justify-between">
-      {/* Calendar */}
       <DayPicker
         className="place-self-center pt-10"
         mode="range"
@@ -38,7 +37,7 @@ function DateSelector({
         max={maxBookingLength}
         excludeDisabled={true}
         selected={range}
-        onSelect={setRange}
+        onSelect={handleSelect}
         disabled={[{ before: new Date() }, ...bookedDates]}
         captionLayout="dropdown"
         numberOfMonths={2}
@@ -64,7 +63,7 @@ function DateSelector({
           />
         </div>
 
-        <ClearButton range={range} onClear={handleClearRange} />
+        <ClearButton range={range} onClear={resetRange} />
       </div>
     </div>
   );
