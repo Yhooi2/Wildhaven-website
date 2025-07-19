@@ -3,7 +3,7 @@ import { getCabin, getCabins } from "@/app/_api/data-service";
 import { SectionHeading, Spinner } from "@/app/_components/ui";
 import { Suspense } from "react";
 import Cabin from "./_components/Cabin";
-import Reservation from "./_components/Reservation";
+import { Reservation } from "@/app/_features/reservation";
 
 export const experimental_ppr = true;
 export async function generateMetadata({ params }) {
