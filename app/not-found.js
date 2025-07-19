@@ -1,4 +1,4 @@
-import BackButton from "./_components/BackButton";
+import { BackButton } from "./_components";
 import { Layout, ErrorHeading, Text } from "./_components/ui";
 
 function NotFound() {

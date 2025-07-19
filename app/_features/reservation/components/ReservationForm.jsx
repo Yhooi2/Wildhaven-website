@@ -1,5 +1,5 @@
 import { Button } from "@/app/_components/ui";
-import GuestSelector from "./GuestSelector";
+import { GuestSelector } from "./";
 
 function ReservationForm({ maxCapacity }) {
   return (

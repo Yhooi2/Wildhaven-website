@@ -1,6 +1,5 @@
 import { SectionHeading, Text } from "../../_components/ui";
-import SelectCountry from "./_components/SelectCountry";
-import UpdateProfileForm from "./_components/UpdateProfileForm";
+import { SelectCountry, UpdateProfileForm } from "./_components";
 
 export const metadata = {
   title: "Update profile",

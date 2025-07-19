@@ -1,7 +1,6 @@
 import { Container } from "@/app/_components/ui";
 import { getBookedDatesByCabinId, getSettings } from "@/app/_api/data-service";
-import DateSelector from "./DateSelector";
-import ReservationForm from "./ReservationForm";
+import { DateSelector, ReservationForm } from "./";
 
 async function Reservation({ cabin }) {
   const [bookedDates, settings] = await Promise.all([

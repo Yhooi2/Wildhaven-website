@@ -1,5 +1,4 @@
-import Logo from "./Logo";
-import Navigation from "./Navigation";
+import { Logo, Navigation } from "./";
 
 function Header() {
   return (

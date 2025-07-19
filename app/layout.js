@@ -1,4 +1,4 @@
-import Header from "./_components/Header/Header";
+import { Header } from "./_components";
 import "@/app/_styles/globals.css";
 
 import { Josefin_Sans } from "next/font/google";

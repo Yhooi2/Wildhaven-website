@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import Spinner from "../_components/ui/Spinner";
-import CabinList from "./_components/CabinList";
-import CabinFilter from "./_components/CabinFilter";
+import { CabinList, CabinFilter } from "./_components";
 import { Text } from "../_components/ui";
 
 export const metadata = {
