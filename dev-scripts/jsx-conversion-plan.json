@@ -1,0 +1,40 @@
+{
+  "toRename": [
+    "app/about/CabinsCounter.js",
+    "app/account/SideMenu.js",
+    "app/account/profile/_components/SelectCountry.js",
+    "app/account/profile/_components/UpdateProfileForm.js",
+    "app/account/reservations/ReservationCard.js"
+  ],
+  "keepAsJS": [
+    "app/_api/data-service.js",
+    "app/_api/supabase.js",
+    "app/_components/ui/index.js",
+    "app/_features/reservation/components/DateSelector.styles.js",
+    "app/_features/reservation/components/index.js",
+    "app/_features/reservation/components/ui/index.js",
+    "app/_features/reservation/context/index.js",
+    "app/_features/reservation/hooks/index.js",
+    "app/_features/reservation/hooks/useReservation.js",
+    "app/_features/reservation/index.js",
+    "app/_features/reservation/utils/dateHelpers.js",
+    "app/_features/reservation/utils/index.js",
+    "app/_features/reservation/utils/pricing.js",
+    "app/about/page.js",
+    "app/account/layout.js",
+    "app/account/page.js",
+    "app/account/profile/page.js",
+    "app/account/reservations/DeleteReservation.js",
+    "app/account/reservations/page.js",
+    "app/cabins/[cabinId]/not-found.js",
+    "app/cabins/[cabinId]/page.js",
+    "app/cabins/loading.js",
+    "app/cabins/page.js",
+    "app/error.js",
+    "app/layout.js",
+    "app/loading.js",
+    "app/not-found.js",
+    "app/page.js"
+  ],
+  "totalFiles": 33
+}

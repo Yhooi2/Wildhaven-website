@@ -1,11 +1,11 @@
-import TextExpander from "@/app/_components/TextExpander";
+import { TextExpander } from "@/app/_components/";
 import { Container, Icon } from "@/app/_components/ui";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const styleLi = "flex items-center gap-3";
 
-function Cabin({ cabin }) {
+export function Cabin({ cabin }) {
   return (
     <Container className="mb-24 grid grid-cols-[3fr_4fr] gap-20 border-l-0 p-10 py-3 text-lg">
       <div className="relative -translate-x-3 scale-110 ">
@@ -49,5 +49,3 @@ function Cabin({ cabin }) {
     </Container>
   );
 }
-
-export default Cabin;

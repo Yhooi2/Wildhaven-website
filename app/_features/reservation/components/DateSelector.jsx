@@ -41,6 +41,7 @@ function DateSelector({
         disabled={[{ before: new Date() }, ...bookedDates]}
         captionLayout="dropdown"
         numberOfMonths={2}
+        hideNavigation
         classNames={DAY_PICKER_CLASS_NAMES}
         modifiers={{
           booked: bookedDates,

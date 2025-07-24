@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Text, Icon } from "../../_components/ui";
 
-function CabinCard({ cabin }) {
+export function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (
@@ -56,5 +56,3 @@ function CabinCard({ cabin }) {
     </Container>
   );
 }
-
-export default CabinCard;

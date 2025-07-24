@@ -1,7 +1,7 @@
 import { FilterButton } from "./";
 import { Container } from "../../_components/ui";
 
-function CabinFilter({ filter }) {
+export function CabinFilter({ filter }) {
   return (
     <Container className="mb-8 flex justify-end">
       <FilterButton capacity="all" active={filter}>
@@ -19,5 +19,3 @@ function CabinFilter({ filter }) {
     </Container>
   );
 }
-
-export default CabinFilter;

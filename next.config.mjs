@@ -13,6 +13,7 @@ const nextConfig = {
         search: "",
       },
     ],
+    domains: ["lh3.googleusercontent.com"],
   },
   //output: "export",
 };

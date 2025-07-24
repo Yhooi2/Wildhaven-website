@@ -23,5 +23,6 @@
   "tailwindCSS.experimental.classRegex": [
     "class[Name]*\\s*[:=]\\s*[\"']([^\"']*)[\"']",
     "className\\s*[:=]\\s*[\"']([^\"']*)[\"']"
-  ]
+  ],
+  "files.autoSave": "onFocusChange"
 }

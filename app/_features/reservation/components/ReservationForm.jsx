@@ -1,11 +1,12 @@
 import { Button } from "@/app/_components/ui";
 import { GuestSelector } from "./";
-
-function ReservationForm({ maxCapacity }) {
+import { AuthHeader } from "@/app/_features/auth";
+async function ReservationForm({ maxCapacity }) {
   return (
     <div>
-      <div className="bg-primary-800 px-16 py-3 text-primary-300">
+      <div className="flex items-center justify-between gap-4 bg-primary-800 px-16 py-3 text-primary-300">
         <p>Logged in as</p>
+        <AuthHeader withName={true} />
       </div>
 
       <form className="flex flex-col justify-between gap-5 bg-primary-900 px-16 py-10">

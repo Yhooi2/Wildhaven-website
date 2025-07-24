@@ -2,7 +2,7 @@ import { getCabins } from "../../_api/data-service";
 import { CabinCard } from "./";
 // import { unstable_noStore } from "next/cache";
 
-async function CabinList({ filter }) {
+export async function CabinList({ filter }) {
   // unstable_noStore();
 
   let cabins = await getCabins();
@@ -32,4 +32,3 @@ async function CabinList({ filter }) {
     </div>
   );
 }
-export default CabinList;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function TextExpander({ children }) {
+export function TextExpander({ children }) {
   const [expanded, setExpanded] = useState(false);
   return (
     <span>

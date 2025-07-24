@@ -1,6 +1,7 @@
 import { Container } from "@/app/_components/ui";
 import { getBookedDatesByCabinId, getSettings } from "@/app/_api/data-service";
 import { DateSelector, ReservationForm } from "./";
+import { Protected } from "../../auth";
 
 async function Reservation({ cabin }) {
   const [bookedDates, settings] = await Promise.all([
@@ -16,7 +17,9 @@ async function Reservation({ cabin }) {
         bookedDates={bookedDates}
         cabin={cabin}
       />
-      <ReservationForm maxCapacity={cabin.maxCapacity} />
+      <Protected>
+        <ReservationForm maxCapacity={cabin.maxCapacity} />
+      </Protected>
     </Container>
   );
 }

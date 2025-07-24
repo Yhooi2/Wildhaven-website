@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-function FilterButton({ children, capacity, active }) {
+export function FilterButton({ children, capacity, active }) {
   const router = useRouter();
   const isActive = capacity === active;
 
@@ -21,5 +21,3 @@ function FilterButton({ children, capacity, active }) {
     </button>
   );
 }
-
-export default FilterButton;
