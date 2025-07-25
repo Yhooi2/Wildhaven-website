@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import { Text } from "../_components/ui";
-import Spinner from "../_components/ui/Spinner";
+import { Text, Spinner } from "../_components/ui";
 import { ReservationRemainder } from "../_features/reservation/components";
 import { CabinFilter, CabinList } from "./_components";
 

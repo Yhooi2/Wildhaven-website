@@ -1,9 +1,4 @@
-export default function Layout({
-  children,
-  className = "",
-  as = "div",
-  ...props
-}) {
+export function Layout({ children, className = "", as = "div", ...props }) {
   const Component = as;
   return (
     <Component

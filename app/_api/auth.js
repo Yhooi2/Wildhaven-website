@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Yandex from "next-auth/providers/yandex";
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+export const authConfig = {
   providers: [
     Google({
       clientId: process.env.AUTH_GOOGLE_ID,
@@ -18,4 +18,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return !!auth?.user;
     },
   },
-});
+  pages: {
+    signIn: "/login",
+  },
+};
+
+export const { handlers, auth, signIn, signOut } = NextAuth(authConfig);

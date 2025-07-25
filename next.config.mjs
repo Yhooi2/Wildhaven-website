@@ -12,8 +12,19 @@ const nextConfig = {
         pathname: "/storage/v1/object/public/cabin-images/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "authjs.dev",
+        port: "",
+        pathname: "/**",
+      },
     ],
-    domains: ["lh3.googleusercontent.com"],
   },
   //output: "export",
 };

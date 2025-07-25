@@ -1,4 +1,4 @@
-export default function Icon({ children, className = "", as, ...props }) {
+export function Icon({ children, className = "", as, ...props }) {
   if (as) {
     const Component = as;
     return (

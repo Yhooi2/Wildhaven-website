@@ -1,4 +1,4 @@
-export default function Input({ label, ...props }) {
+export function Input({ label, ...props }) {
   return (
     <div className="space-y-2">
       <label>{label}</label>

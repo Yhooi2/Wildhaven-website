@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Icon from "../_components/ui/Icon";
+import { Icon } from "../_components/ui";
 
 const styles = {
   nav: "border-r border-primary-900",
