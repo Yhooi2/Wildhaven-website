@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "shrimp-task-manager": {
+      "command": "npx",
+      "args": ["-y", "@cjo4m06/mcp-shrimp-task-manager"],
+      "env": {
+        "DATA_DIR": "/Users/art/code/.shrimp-task-manager/Wildhaven-website",
+        "TEMPLATES_USE": "en",
+        "ENABLE_GUI": "false"
+      }
+    }
+  }
+}
