@@ -1,10 +1,13 @@
 "use server";
 
-import { signIn } from "@/app/_api/auth";
+import { signIn, signOut } from "@/app/_api/auth";
 
 export async function signInWithProvider(formData) {
-  console.log(formData);
   await signIn(formData.get("providerName").toLowerCase(), {
     redirectTo: "/account",
   });
+}
+
+export async function signOutUser() {
+  await signOut({ redirectTo: "/" });
 }

@@ -1,12 +1,12 @@
 "use client";
 import {
-  ArrowRightStartOnRectangleIcon,
   CalendarDaysIcon,
   HomeIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { SignOutButton } from "../_features/auth/components";
 import { Icon } from "../_components/ui";
 
 const styles = {
@@ -19,17 +19,17 @@ const navItems = [
   {
     name: "Profile",
     href: "/account",
-    icon: <HomeIcon className={styles.icon} />,
+    icon: HomeIcon,
   },
   {
     name: "Reservations",
     href: "/account/reservations",
-    icon: <CalendarDaysIcon className={styles.icon} />,
+    icon: CalendarDaysIcon,
   },
   {
     name: "Update Profile",
     href: "/account/profile",
-    icon: <UserIcon className={styles.icon} />,
+    icon: UserIcon,
   },
 ];
 function SideMenu() {
@@ -46,17 +46,14 @@ function SideMenu() {
                 styles.link + (isActive(item.href) ? " bg-primary-900" : "")
               }
             >
-              <span>{item.icon}</span>
+              <span>{<Icon as={item.icon} />}</span>
               <span>{item.name}</span>
             </Link>
           </li>
         ))}
         {
           <li className="mt-auto ">
-            <button href="/logout" className={styles.link + " w-full"}>
-              <Icon as={ArrowRightStartOnRectangleIcon} />
-              Sign out
-            </button>
+            <SignOutButton />
           </li>
         }
       </ul>
