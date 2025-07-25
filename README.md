@@ -10,6 +10,28 @@ A modern website for Wildhaven cabins and accommodations.
 - Cabin booking system
 - User account management
 
+## Dependencies
+
+| Library                     | Description                                                           | Documentation                                                                      |
+| --------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| @heroicons/react            | Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.      | [Docs](https://github.com/tailwindlabs/heroicons)                                  |
+| @modelcontextprotocol/sdk   | SDK for Model Context Protocol, enabling context-driven AI workflows. | [Docs](https://github.com/ppl-ai/modelcontextprotocol)                             |
+| @supabase/supabase-js       | JavaScript client for Supabase, an open-source Firebase alternative.  | [Docs](https://supabase.com/docs/reference/javascript)                             |
+| date-fns                    | Modern JavaScript date utility library.                               | [Docs](https://date-fns.org/docs/)                                                 |
+| mcp-shrimp-task-manager     | Advanced task management and planning tool.                           | [Docs](https://www.npmjs.com/package/mcp-shrimp-task-manager)                      |
+| next                        | The React Framework for Production.                                   | [Docs](https://nextjs.org/docs)                                                    |
+| next-auth                   | Authentication for Next.js applications.                              | [Docs](https://next-auth.js.org/)                                                  |
+| react                       | A JavaScript library for building user interfaces.                    | [Docs](https://react.dev/)                                                         |
+| react-day-picker            | Flexible date picker component for React.                             | [Docs](https://react-day-picker.js.org/)                                           |
+| react-dom                   | Serves as the entry point to the DOM and server renderers for React.  | [Docs](https://react.dev/reference/react-dom)                                      |
+| eslint                      | Pluggable JavaScript linter.                                          | [Docs](https://eslint.org/docs/latest/)                                            |
+| eslint-config-next          | Next.js ESLint configuration.                                         | [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) |
+| eslint-plugin-tailwindcss   | Linting plugin for Tailwind CSS classes.                              | [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)               |
+| postcss                     | Tool for transforming CSS with JavaScript.                            | [Docs](https://postcss.org/docs/)                                                  |
+| prettier                    | Opinionated code formatter.                                           | [Docs](https://prettier.io/docs/en/index.html)                                     |
+| prettier-plugin-tailwindcss | Prettier plugin for sorting Tailwind CSS classes.                     | [Docs](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                |
+| tailwindcss                 | Utility-first CSS framework.                                          | [Docs](https://tailwindcss.com/docs)                                               |
+
 ## Development
 
 ```bash
@@ -37,6 +59,50 @@ For detailed architecture documentation, see [PROJECT_ARCHITECTURE.md](./PROJECT
 - **Icons**: Heroicons
 - **Date Handling**: date-fns
 - **Date Picker**: react-day-picker
+
+## Project Dependencies Overview
+
+| Library                                                                                          | Purpose      | Description                                        | Documentation                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------ | -------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [@heroicons/react](https://github.com/tailwindlabs/heroicons)                                    | UI           | React SVG icon library from Tailwind Labs          | [Docs](https://github.com/tailwindlabs/heroicons#react)                            |
+| [@modelcontextprotocol/sdk](https://github.com/ppl-ai/modelcontextprotocol)                      | Utilities    | SDK for Model Context Protocol, context management | [Docs](https://github.com/ppl-ai/modelcontextprotocol)                             |
+| [@supabase/supabase-js](https://supabase.com/docs/reference/javascript)                          | Data/Backend | JS client for Supabase backend/database            | [Docs](https://supabase.com/docs/reference/javascript)                             |
+| [date-fns](https://date-fns.org/)                                                                | Utilities    | Modern JavaScript date utility library             | [Docs](https://date-fns.org/docs/)                                                 |
+| [mcp-shrimp-task-manager](https://www.npmjs.com/package/mcp-shrimp-task-manager)                 | Dev Tools    | Advanced task management and planning tool         | [Docs](https://www.npmjs.com/package/mcp-shrimp-task-manager)                      |
+| [next](https://nextjs.org/)                                                                      | Framework    | React framework for SSR, SSG, routing              | [Docs](https://nextjs.org/docs)                                                    |
+| [next-auth](https://next-auth.js.org/)                                                           | Auth         | Authentication for Next.js apps                    | [Docs](https://next-auth.js.org/getting-started/introduction)                      |
+| [react](https://react.dev/)                                                                      | UI           | Core React library for building UIs                | [Docs](https://react.dev/)                                                         |
+| [react-day-picker](https://react-day-picker.js.org/)                                             | UI           | Flexible date picker component for React           | [Docs](https://react-day-picker.js.org/)                                           |
+| [react-dom](https://react.dev/)                                                                  | UI           | React DOM renderer                                 | [Docs](https://react.dev/reference/react-dom)                                      |
+| [eslint](https://eslint.org/)                                                                    | Dev Tools    | Pluggable JavaScript linter                        | [Docs](https://eslint.org/docs/latest/)                                            |
+| [eslint-config-next](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) | Dev Tools    | ESLint config for Next.js                          | [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) |
+| [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)        | Dev Tools    | ESLint plugin for Tailwind CSS class sorting       | [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)               |
+| [postcss](https://postcss.org/)                                                                  | Dev Tools    | CSS transformer for JS                             | [Docs](https://postcss.org/docs/)                                                  |
+| [prettier](https://prettier.io/)                                                                 | Dev Tools    | Code formatter                                     | [Docs](https://prettier.io/docs/en/index.html)                                     |
+| [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)       | Dev Tools    | Prettier plugin for sorting Tailwind CSS classes   | [Docs](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                |
+| [tailwindcss](https://tailwindcss.com/)                                                          | UI           | Utility-first CSS framework                        | [Docs](https://tailwindcss.com/docs)                                               |
+
+## Project Dependencies
+
+Below is a list of all major libraries used in this project, with a brief description and a link to their official documentation:
+
+- **@heroicons/react**: React components for Heroicons SVG icons. [Docs](https://heroicons.com/)
+- **@modelcontextprotocol/sdk**: SDK for Model Context Protocol, used for context-driven AI integrations. [Docs](https://github.com/ppl-ai/modelcontextprotocol)
+- **@supabase/supabase-js**: JavaScript client for Supabase, an open-source Firebase alternative. [Docs](https://supabase.com/docs/reference/javascript)
+- **date-fns**: Modern JavaScript date utility library. [Docs](https://date-fns.org/docs/Getting-Started)
+- **mcp-shrimp-task-manager**: Advanced task management tool for project planning and workflow automation. [Docs](https://www.npmjs.com/package/mcp-shrimp-task-manager)
+- **next**: React framework for server-side rendering and static site generation. [Docs](https://nextjs.org/docs)
+- **next-auth**: Authentication for Next.js applications. [Docs](https://next-auth.js.org/getting-started/introduction)
+- **react**: Core React library for building user interfaces. [Docs](https://react.dev/learn)
+- **react-day-picker**: Flexible date picker component for React. [Docs](https://react-day-picker.js.org/)
+- **react-dom**: React package for working with the DOM. [Docs](https://react.dev/reference/react-dom)
+- **eslint**: Pluggable JavaScript linter. [Docs](https://eslint.org/docs/latest/)
+- **eslint-config-next**: ESLint configuration used by Next.js. [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint)
+- **eslint-plugin-tailwindcss**: Linting for Tailwind CSS classes in your code. [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)
+- **postcss**: Tool for transforming CSS with JavaScript plugins. [Docs](https://postcss.org/)
+- **prettier**: Opinionated code formatter. [Docs](https://prettier.io/docs/en/index.html)
+- **prettier-plugin-tailwindcss**: Prettier plugin for sorting Tailwind CSS classes. [Docs](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+- **tailwindcss**: Utility-first CSS framework. [Docs](https://tailwindcss.com/docs/installation)
 
 ## Architecture
 
@@ -152,21 +218,4 @@ app/
 - `npm run dev` - Start development server with Turbopack
 - `npm run build` - Build for production
 - `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-
-## Testing
-
-The project includes automated testing scripts:
-
-- `node scripts/quick-test.js` - Quick project integrity check
-- `node scripts/test-after-step.js` - Step-by-step testing after refactoring
-
-These scripts verify:
-
-- Build process
-- Linting
-- File structure
-- Import consistency
-- Component exports
+- `npm run lint`
