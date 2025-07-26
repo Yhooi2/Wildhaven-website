@@ -5,7 +5,7 @@ export const metadata = {
   title: "Update profile",
 };
 
-function page() {
+async function page() {
   const nationality = "portugal";
   return (
     <div>

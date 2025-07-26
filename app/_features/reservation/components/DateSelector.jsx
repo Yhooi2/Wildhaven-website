@@ -1,6 +1,6 @@
 "use client";
 import { useReservation } from "../context";
-import { differenceInDays } from "date-fns";
+import { addMonths, differenceInDays } from "date-fns";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
@@ -42,6 +42,8 @@ function DateSelector({
         captionLayout="dropdown"
         numberOfMonths={2}
         hideNavigation
+        startMonth={new Date()}
+        endMonth={addMonths(new Date(), 12)}
         classNames={DAY_PICKER_CLASS_NAMES}
         modifiers={{
           booked: bookedDates,

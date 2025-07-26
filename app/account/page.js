@@ -1,11 +1,18 @@
+import { auth } from "../_api/auth";
 import { SectionHeading } from "../_components/ui";
+import { transliterate as tr } from "transliteration";
 
 export const metadata = {
   title: "Welcome",
 };
 
-function Page() {
-  return <SectionHeading className="mb-7">welcome %guest%</SectionHeading>;
+async function Page() {
+  const session = await auth();
+  const guest = session?.user?.name || "guest";
+  const arr = guest.split(" ");
+  const name = tr(arr[0]);
+
+  return <SectionHeading className="mb-7">Welcome, {name}</SectionHeading>;
 }
 
 export default Page;

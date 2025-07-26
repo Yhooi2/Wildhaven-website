@@ -1,18 +1,13 @@
-import { authConfig } from "@/app/_api/auth";
 import { SigninButton } from "./";
 
-export async function AuthProviders() {
-  const providers = authConfig.providers;
+export function AuthProviders() {
+  const providers = ["Google", "Yandex"];
+
   return (
     <ul className="flex flex-col items-center gap-6">
       {providers.map((provider) => (
-        <li
-          key={provider.id}
-          className="transition-colors hover:bg-primary-600 "
-        >
-          <SigninButton providerId={provider.id} providerName={provider.name}>
-            Continue with {provider.name}
-          </SigninButton>
+        <li key={provider} className="transition-colors hover:bg-primary-600 ">
+          <SigninButton provider={provider}> Continue with </SigninButton>
         </li>
       ))}
     </ul>

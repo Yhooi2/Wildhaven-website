@@ -3,7 +3,7 @@
 import { signIn, signOut } from "@/app/_api/auth";
 
 export async function signInWithProvider(formData) {
-  await signIn(formData.get("providerName").toLowerCase(), {
+  await signIn(formData.get("providerName"), {
     redirectTo: "/account",
   });
 }

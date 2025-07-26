@@ -25,7 +25,7 @@ function Navigation() {
             <Suspense>
               <AuthHeader />
             </Suspense>
-            <span>Guest area</span>
+            <span className="hidden md:block">Guest area</span>
           </Link>
         </li>
       </ul>

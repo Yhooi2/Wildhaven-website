@@ -1,5 +1,6 @@
 import { auth } from "@/app/_api/auth";
 import Image from "next/image";
+import { transliterate as tr } from "transliteration";
 
 export async function AuthHeader({ withName = false }) {
   const session = await auth();
@@ -8,6 +9,7 @@ export async function AuthHeader({ withName = false }) {
   }
 
   const user = session?.user;
+  const name = tr(user?.name);
   return (
     <div className="flex items-center gap-4 ">
       <Image
@@ -17,7 +19,7 @@ export async function AuthHeader({ withName = false }) {
         height={32}
         className="rounded-full"
       />
-      {withName && <p>{user?.name}</p>}
+      {withName && <p>{name}</p>}
     </div>
   );
 }

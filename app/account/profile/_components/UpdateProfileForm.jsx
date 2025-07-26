@@ -15,11 +15,11 @@ function UpdateProfileForm({ children }) {
       <div className="space-y-2">
         <div className="flex justify-between gap-2">
           <label>Where do you from?</label>
-          <img
+          {/* <img
             src={countryFlag}
             alt="Country flag"
             className="h-5 rounded-sm"
-          />
+          /> */}
         </div>
         {children}
       </div>

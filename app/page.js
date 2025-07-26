@@ -9,7 +9,6 @@ export default function Page() {
         src={bg}
         fill
         placeholder="blur"
-        quality={90}
         className="object-cover object-top"
         alt="Montains and forests whith two cabins"
       />

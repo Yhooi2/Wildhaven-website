@@ -4,9 +4,8 @@ import {
   HomeIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { SignOutButton } from "../_features/auth/components";
+import { usePathname } from "next/navigation";
 import { Icon } from "../_components/ui";
 
 const styles = {
@@ -32,7 +31,7 @@ const navItems = [
     icon: UserIcon,
   },
 ];
-function SideMenu() {
+function SideMenu({ children }) {
   const pathname = usePathname();
   const isActive = (href) => pathname === href;
   return (
@@ -51,11 +50,7 @@ function SideMenu() {
             </Link>
           </li>
         ))}
-        {
-          <li className="mt-auto ">
-            <SignOutButton />
-          </li>
-        }
+        {<li className="mt-auto ">{children}</li>}
       </ul>
     </nav>
   );
