@@ -12,25 +12,26 @@ A modern website for Wildhaven cabins and accommodations.
 
 ## Dependencies
 
-| Library                     | Description                                                           | Documentation                                                                      |
-| --------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| @heroicons/react            | Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.      | [Docs](https://github.com/tailwindlabs/heroicons)                                  |
-| @modelcontextprotocol/sdk   | SDK for Model Context Protocol, enabling context-driven AI workflows. | [Docs](https://github.com/ppl-ai/modelcontextprotocol)                             |
-| @supabase/supabase-js       | JavaScript client for Supabase, an open-source Firebase alternative.  | [Docs](https://supabase.com/docs/reference/javascript)                             |
-| date-fns                    | Modern JavaScript date utility library.                               | [Docs](https://date-fns.org/docs/)                                                 |
-| mcp-shrimp-task-manager     | Advanced task management and planning tool.                           | [Docs](https://www.npmjs.com/package/mcp-shrimp-task-manager)                      |
-| next                        | The React Framework for Production.                                   | [Docs](https://nextjs.org/docs)                                                    |
-| next-auth                   | Authentication for Next.js applications.                              | [Docs](https://next-auth.js.org/)                                                  |
-| react                       | A JavaScript library for building user interfaces.                    | [Docs](https://react.dev/)                                                         |
-| react-day-picker            | Flexible date picker component for React.                             | [Docs](https://react-day-picker.js.org/)                                           |
-| react-dom                   | Serves as the entry point to the DOM and server renderers for React.  | [Docs](https://react.dev/reference/react-dom)                                      |
-| eslint                      | Pluggable JavaScript linter.                                          | [Docs](https://eslint.org/docs/latest/)                                            |
-| eslint-config-next          | Next.js ESLint configuration.                                         | [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) |
-| eslint-plugin-tailwindcss   | Linting plugin for Tailwind CSS classes.                              | [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)               |
-| postcss                     | Tool for transforming CSS with JavaScript.                            | [Docs](https://postcss.org/docs/)                                                  |
-| prettier                    | Opinionated code formatter.                                           | [Docs](https://prettier.io/docs/en/index.html)                                     |
-| prettier-plugin-tailwindcss | Prettier plugin for sorting Tailwind CSS classes.                     | [Docs](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                |
-| tailwindcss                 | Utility-first CSS framework.                                          | [Docs](https://tailwindcss.com/docs)                                               |
+| Library                     | Description                                                             | Documentation                                                                      |
+| --------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| @heroicons/react            | Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.        | [Docs](https://github.com/tailwindlabs/heroicons)                                  |
+| @modelcontextprotocol/sdk   | SDK for Model Context Protocol, enabling context-driven AI workflows.   | [Docs](https://github.com/ppl-ai/modelcontextprotocol)                             |
+| @supabase/supabase-js       | JavaScript client for Supabase, an open-source Firebase alternative.    | [Docs](https://supabase.com/docs/reference/javascript)                             |
+| date-fns                    | Modern JavaScript date utility library.                                 | [Docs](https://date-fns.org/docs/)                                                 |
+| mcp-shrimp-task-manager     | Advanced task management and planning tool.                             | [Docs](https://www.npmjs.com/package/mcp-shrimp-task-manager)                      |
+| next                        | The React Framework for Production.                                     | [Docs](https://nextjs.org/docs)                                                    |
+| next-auth                   | Authentication for Next.js applications.                                | [Docs](https://next-auth.js.org/)                                                  |
+| react                       | A JavaScript library for building user interfaces.                      | [Docs](https://react.dev/)                                                         |
+| react-day-picker            | Flexible date picker component for React.                               | [Docs](https://react-day-picker.js.org/)                                           |
+| react-dom                   | Serves as the entry point to the DOM and server renderers for React.    | [Docs](https://react.dev/reference/react-dom)                                      |
+| transliteration             | Library for converting Unicode text to ASCII for Russian name handling. | [Docs](https://github.com/dzcpy/transliteration)                                   |
+| eslint                      | Pluggable JavaScript linter.                                            | [Docs](https://eslint.org/docs/latest/)                                            |
+| eslint-config-next          | Next.js ESLint configuration.                                           | [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) |
+| eslint-plugin-tailwindcss   | Linting plugin for Tailwind CSS classes.                                | [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)               |
+| postcss                     | Tool for transforming CSS with JavaScript.                              | [Docs](https://postcss.org/docs/)                                                  |
+| prettier                    | Opinionated code formatter.                                             | [Docs](https://prettier.io/docs/en/index.html)                                     |
+| prettier-plugin-tailwindcss | Prettier plugin for sorting Tailwind CSS classes.                       | [Docs](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                |
+| tailwindcss                 | Utility-first CSS framework.                                            | [Docs](https://tailwindcss.com/docs)                                               |
 
 ## Development
 
@@ -52,13 +53,14 @@ For detailed architecture documentation, see [PROJECT_ARCHITECTURE.md](./PROJECT
 
 ## Tech Stack
 
-- **Framework**: Next.js 15.4.2-canary.0
+- **Framework**: Next.js 15.4.2-canary.16
 - **React**: 19.1.0
 - **Styling**: Tailwind CSS
 - **Database**: Supabase
 - **Icons**: Heroicons
 - **Date Handling**: date-fns
 - **Date Picker**: react-day-picker
+- **Text Processing**: transliteration (v2.3.5) for Russian name handling
 
 ## Project Dependencies Overview
 
@@ -74,6 +76,7 @@ For detailed architecture documentation, see [PROJECT_ARCHITECTURE.md](./PROJECT
 | [react](https://react.dev/)                                                                      | UI           | Core React library for building UIs                | [Docs](https://react.dev/)                                                         |
 | [react-day-picker](https://react-day-picker.js.org/)                                             | UI           | Flexible date picker component for React           | [Docs](https://react-day-picker.js.org/)                                           |
 | [react-dom](https://react.dev/)                                                                  | UI           | React DOM renderer                                 | [Docs](https://react.dev/reference/react-dom)                                      |
+| [transliteration](https://github.com/dzcpy/transliteration)                                      | Utilities    | Unicode to ASCII conversion for Russian names      | [Docs](https://github.com/dzcpy/transliteration)                                   |
 | [eslint](https://eslint.org/)                                                                    | Dev Tools    | Pluggable JavaScript linter                        | [Docs](https://eslint.org/docs/latest/)                                            |
 | [eslint-config-next](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) | Dev Tools    | ESLint config for Next.js                          | [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint) |
 | [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)        | Dev Tools    | ESLint plugin for Tailwind CSS class sorting       | [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)               |
@@ -96,6 +99,7 @@ Below is a list of all major libraries used in this project, with a brief descri
 - **react**: Core React library for building user interfaces. [Docs](https://react.dev/learn)
 - **react-day-picker**: Flexible date picker component for React. [Docs](https://react-day-picker.js.org/)
 - **react-dom**: React package for working with the DOM. [Docs](https://react.dev/reference/react-dom)
+- **transliteration**: Library for converting Unicode text to ASCII, used for Russian name handling. [Docs](https://github.com/dzcpy/transliteration)
 - **eslint**: Pluggable JavaScript linter. [Docs](https://eslint.org/docs/latest/)
 - **eslint-config-next**: ESLint configuration used by Next.js. [Docs](https://nextjs.org/docs/pages/building-your-application/configuring/eslint)
 - **eslint-plugin-tailwindcss**: Linting for Tailwind CSS classes in your code. [Docs](https://github.com/francoismassart/eslint-plugin-tailwindcss)
