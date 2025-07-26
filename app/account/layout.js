@@ -3,7 +3,7 @@ import SideMenu from "./SideMenu";
 
 function Layout({ children }) {
   return (
-    <div className="grid h-full grid-cols-[16rem_1fr] gap-12">
+    <div className="grid h-full grid-cols-[16rem_1fr] gap-12 md:gap-20 xl:gap-32">
       <SideMenu>
         <SignOutButton />
       </SideMenu>

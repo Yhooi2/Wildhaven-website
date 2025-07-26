@@ -1,34 +1,48 @@
 "use client";
-import { Button } from "@/app/_components/ui";
-import { Input } from "@/app/_components/ui";
-import { useState } from "react";
+import { Button, Input } from "@/app/_components/ui";
+import { updateProfile } from "../actions";
+import { useFormStatus } from "react-dom";
 
-function UpdateProfileForm({ children }) {
-  const [count, setCount] = useState("pt.jpg");
-  // CHANGE
-  const countryFlag = "pt.jpg";
-  const nationality = "portugal";
+function UpdateProfileForm({ children, guest }) {
+  const { fullName, email, nationalID } = guest;
+
   return (
-    <form className=" flex flex-col gap-6 bg-primary-900 px-12 py-8 text-lg">
-      <Input label="Full name" disabled={true} />
-      <Input label="Email address" disabled={true} />
-      <div className="space-y-2">
-        <div className="flex justify-between gap-2">
-          <label>Where do you from?</label>
-          {/* <img
-            src={countryFlag}
-            alt="Country flag"
-            className="h-5 rounded-sm"
-          /> */}
-        </div>
-        {children}
-      </div>
-      <Input label="National ID number" />
-      <div className="flex justify-end">
-        <Button>Update profile</Button>
-      </div>
+    <form
+      action={updateProfile}
+      className=" flex max-w-2xl flex-col gap-6 bg-primary-900 px-12 py-8 text-lg"
+    >
+      <Input
+        label="Full name"
+        disabled={true}
+        defaultValue={fullName}
+        name="fullName"
+      />
+      <Input
+        label="Email address"
+        disabled={true}
+        defaultValue={email}
+        name="email"
+      />
+      {children}
+      <Input
+        label="National ID number"
+        defaultValue={nationalID}
+        name="nationalID"
+      />
+      <FormButton />
     </form>
   );
 }
 
 export default UpdateProfileForm;
+
+function FormButton() {
+  const { pending } = useFormStatus();
+  return (
+    <div className="flex justify-end">
+      <Button disabled={pending}>
+        {pending ? "Updating..." : "Update profile"}
+      </Button>
+    </div>
+  );
+}
