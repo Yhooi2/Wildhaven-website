@@ -28,7 +28,26 @@
 
 - **Описание**: Продвинутая система управления задачами для структурированных рабочих процессов
 - **Команда**: `npx -y @cjo4m06/mcp-shrimp-task-manager`
-- **Статус**: ✅ Настроен через Smithery CLI с поддержкой подпапок проектов
+- **Статус**: ✅ Настроен с поддержкой подпапок проектов
+
+### 4. Node.js Debugger
+
+- **Описание**: Отладка Node.js приложений во время выполнения
+- **Команда**: `npx -y @hyperdrive-eng/mcp-nodejs-debugger`
+- **Функции**:
+  - Установка точек останова
+  - Просмотр переменных и стека вызовов
+  - Пошаговая отладка
+  - Выполнение выражений в контексте
+
+### 5. DuckDuckGo Search
+
+- **Описание**: Веб-поиск для получения актуальной информации
+- **Команда**: `npx -y duckduckgo-mcp-server`
+- **Функции**:
+  - Поиск актуальной информации
+  - Настройка уровня безопасности
+  - Ограничение количества результатов
 
 ## Конфигурация
 
@@ -48,9 +67,22 @@
       "command": "npx",
       "args": ["-y", "@kazuph/mcp-taskmanager"]
     },
-    "shrimp-taskmanager": {
+    "shrimp-task-manager": {
       "command": "npx",
-      "args": ["-y", "@cjo4m06/mcp-shrimp-task-manager"]
+      "args": ["-y", "@cjo4m06/mcp-shrimp-task-manager"],
+      "env": {
+        "DATA_DIR": "/Users/art/code/.shrimp-task-manager/Wildhaven-website",
+        "TEMPLATES_USE": "en",
+        "ENABLE_GUI": "false"
+      }
+    },
+    "nodejs-debugger": {
+      "command": "npx",
+      "args": ["-y", "@hyperdrive-eng/mcp-nodejs-debugger"]
+    },
+    "duckduckgo-search": {
+      "command": "npx",
+      "args": ["-y", "duckduckgo-mcp-server"]
     }
   }
 }
@@ -114,13 +146,38 @@ mcp_taskmanager_mark_task_done --requestId "req-1" --taskId "task-1"
 
 Инструмент автоматически анализирует контекст проекта и создает структурированный план с учетом используемых технологий.
 
+### Node.js Debugger
+
+```bash
+# Подготовка приложения для отладки
+node --inspect your-app.js
+
+# Команды отладки (используются в чате)
+"Установи точку останова в app.js на строке 35"
+"Покажи значения переменных в текущем контексте"
+"Выполни шаг в функцию"
+"Продолжи выполнение"
+```
+
+### DuckDuckGo Search
+
+```bash
+# Поиск информации
+@duckduckgo-search duckduckgo_search "Next.js 15 новые возможности"
+
+# Поиск с параметрами
+@duckduckgo-search duckduckgo_search "React Server Components" --count 5 --safeSearch strict
+```
+
 ## Проверка работоспособности
 
 Все инструменты протестированы и работают корректно:
 
 ✅ **Context7**: Успешно получает документацию библиотек
 ✅ **TaskManager**: Корректно управляет задачами и отслеживает прогресс
-✅ **Shrimp TaskManager**: Настроен через Smithery CLI. Создает детальные планы с анализом зависимостей, критериями приемки и псевдокодом.
+✅ **Shrimp TaskManager**: Настроен с поддержкой подпапок проектов. Создает детальные планы с анализом зависимостей, критериями приемки и псевдокодом.
+✅ **Node.js Debugger**: Готов к отладке приложений
+✅ **DuckDuckGo Search**: Доступен для веб-поиска
 
 ## Структура файлов
 

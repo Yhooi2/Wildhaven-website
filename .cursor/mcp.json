@@ -1,5 +1,14 @@
 {
   "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {}
+    },
+    "taskmanager": {
+      "command": "npx",
+      "args": ["-y", "@kazuph/mcp-taskmanager"]
+    },
     "shrimp-task-manager": {
       "command": "npx",
       "args": ["-y", "@cjo4m06/mcp-shrimp-task-manager"],
@@ -8,6 +17,14 @@
         "TEMPLATES_USE": "en",
         "ENABLE_GUI": "false"
       }
+    },
+    "nodejs-debugger": {
+      "command": "npx",
+      "args": ["-y", "@hyperdrive-eng/mcp-nodejs-debugger"]
+    },
+    "duckduckgo-search": {
+      "command": "npx",
+      "args": ["-y", "duckduckgo-mcp-server"]
     }
   }
 }

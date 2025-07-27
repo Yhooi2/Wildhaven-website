@@ -131,6 +131,7 @@ This project follows **Feature-Sliced Design (FSD)** principles:
 ```
 app/
 ├── _api/                    # Data layer (renamed from _lib/)
+│   ├── auth.js
 │   ├── data-service.js
 │   └── supabase.js
 ├── _components/             # Shared UI components
@@ -154,22 +155,38 @@ app/
 │   ├── TextExpander.jsx
 │   └── index.js
 ├── _features/              # Feature-based architecture
+│   ├── auth/               # Authentication feature
+│   │   ├── actions/
+│   │   │   └── auth-actions.js
+│   │   ├── components/
+│   │   │   ├── AuthHeader.jsx
+│   │   │   ├── AuthProviders.jsx
+│   │   │   ├── LoginMessage.jsx
+│   │   │   ├── Protected.jsx
+│   │   │   ├── SignInButton.jsx
+│   │   │   ├── SignOutButton.jsx
+│   │   │   └── index.js
+│   │   └── index.js
 │   └── reservation/        # Reservation feature
 │       ├── components/     # Feature components
 │       │   ├── ui/        # Feature-specific UI
 │       │   │   ├── BookingSummary.jsx
 │       │   │   ├── ClearButton.jsx
 │       │   │   ├── PriceDisplay.jsx
+│       │   │   ├── ReservationStatus.jsx
 │       │   │   └── index.js
 │       │   ├── DateSelector.jsx
+│       │   ├── DateSelector.styles.js
 │       │   ├── GuestSelector.jsx
 │       │   ├── Reservation.jsx
+│       │   ├── ReservationCard.jsx
+│       │   ├── ReservationDate.jsx
 │       │   ├── ReservationForm.jsx
+│       │   ├── ReservationRemainder.jsx
+│       │   ├── ReservationsList.jsx
 │       │   └── index.js
 │       ├── context/        # Feature context
 │       │   ├── ReservationProvider.jsx
-│       │   └── index.js
-│       ├── hooks/          # Feature hooks
 │       │   ├── useReservation.js
 │       │   └── index.js
 │       ├── utils/          # Feature utilities
@@ -185,32 +202,37 @@ app/
 │   │   │   ├── SelectCountry.jsx
 │   │   │   ├── UpdateProfileForm.jsx
 │   │   │   └── index.js
+│   │   ├── actions.js
 │   │   └── page.js
 │   ├── reservations/
-│   │   ├── ReservationCard.jsx
 │   │   └── page.js
 │   ├── SideMenu.jsx
 │   ├── layout.js
 │   └── page.js
 ├── cabins/                 # Cabins pages
 │   ├── _components/
+│   │   ├── Cabin.jsx
 │   │   ├── CabinCard.jsx
 │   │   ├── CabinFilter.jsx
 │   │   ├── CabinList.jsx
 │   │   ├── FilterButton.jsx
 │   │   └── index.js
 │   ├── [cabinId]/
-│   │   ├── _components/
-│   │   │   ├── Cabin.jsx
-│   │   │   └── index.js
 │   │   ├── not-found.js
-│   │   │   └── page.js
+│   │   └── page.js
 │   ├── loading.js
 │   └── page.js
 ├── about/
 │   ├── CabinsCounter.jsx
 │   └── page.js
+├── api/
+│   └── auth/
+│       └── [...nextauth]/
+│           └── route.js
+├── login/
+│   └── page.js
 ├── error.js
+├── icon.png
 ├── layout.js
 ├── loading.js
 ├── not-found.js
