@@ -11,7 +11,7 @@ import {
 import { PriceDisplay, BookingSummary, ClearButton } from "./ui";
 import { calculatePricing } from "../utils";
 
-function DateSelector({
+export function DateSelector({
   minBookingLength,
   maxBookingLength,
   bookedDates,
@@ -31,7 +31,7 @@ function DateSelector({
   return (
     <div className="flex flex-col justify-between">
       <DayPicker
-        className="place-self-center pt-10"
+        className="px-2 pt-10"
         mode="range"
         min={minBookingLength}
         max={maxBookingLength}
@@ -71,5 +71,3 @@ function DateSelector({
     </div>
   );
 }
-
-export default DateSelector;

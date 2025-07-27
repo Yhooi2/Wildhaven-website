@@ -1,4 +1,4 @@
-function PriceDisplay({ regularPrice, discount, nightlyPrice }) {
+export function PriceDisplay({ regularPrice, discount, nightlyPrice }) {
   return (
     <p className="flex items-baseline gap-2">
       {discount > 0 ? (
@@ -15,5 +15,3 @@ function PriceDisplay({ regularPrice, discount, nightlyPrice }) {
     </p>
   );
 }
-
-export default PriceDisplay;

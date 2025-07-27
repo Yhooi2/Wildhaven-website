@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import { Icon } from "@/app/_components/ui";
 import Link from "next/link";
 
-function ReservationRemainder() {
+export function ReservationRemainder() {
   const { range, resetRange, cabinId } = useReservation();
   const { to, from } = range;
 
@@ -26,5 +26,3 @@ function ReservationRemainder() {
     </div>
   );
 }
-
-export default ReservationRemainder;

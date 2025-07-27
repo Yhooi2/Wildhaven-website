@@ -1,7 +1,7 @@
 import { Button } from "@/app/_components/ui";
 import { AuthHeader } from "@/app/_features/auth";
 import { GuestSelector } from "./";
-async function ReservationForm({ maxCapacity }) {
+export async function ReservationForm({ maxCapacity }) {
   return (
     <div>
       <div className="flex items-center justify-between gap-4 bg-primary-800 px-16 py-3 text-primary-300">
@@ -31,5 +31,3 @@ async function ReservationForm({ maxCapacity }) {
     </div>
   );
 }
-
-export default ReservationForm;

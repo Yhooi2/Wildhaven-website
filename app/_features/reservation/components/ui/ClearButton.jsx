@@ -1,4 +1,4 @@
-function ClearButton({ range, onClear }) {
+export function ClearButton({ range, onClear }) {
   if (!range.from && !range.to) return null;
 
   return (
@@ -10,5 +10,3 @@ function ClearButton({ range, onClear }) {
     </button>
   );
 }
-
-export default ClearButton;

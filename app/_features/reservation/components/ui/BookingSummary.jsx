@@ -1,4 +1,4 @@
-function BookingSummary({ numNights, totalPrice }) {
+export function BookingSummary({ numNights, totalPrice }) {
   if (!numNights) return null;
 
   return (
@@ -13,5 +13,3 @@ function BookingSummary({ numNights, totalPrice }) {
     </>
   );
 }
-
-export default BookingSummary;

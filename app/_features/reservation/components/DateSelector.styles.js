@@ -8,8 +8,9 @@ export const DAY_PICKER_CLASS_NAMES = {
   month_caption: "font-bold text-lg text-primary-100 text-center mb-3",
   month_grid: "",
   chevron: "fill-primary-100",
-  root: "flex flex-col lg:flex-row min-w-max",
-  months: "flex flex-col lg:flex-row gap-2",
+  root: "flex flex-col min-w-max",
+  months: "grid grid-cols-2  gap-2",
+  month: "flex flex-col items-center",
 };
 
 export const MODIFIERS_CLASS_NAMES = {

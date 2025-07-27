@@ -5,4 +5,5 @@ export * from "./Icon";
 export * from "./Input";
 export * from "./Layout";
 export * from "./Spinner";
+export * from "./SpinnerMini";
 export * from "./Text";
