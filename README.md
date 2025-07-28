@@ -2,6 +2,25 @@
 
 A modern website for Wildhaven cabins and accommodations.
 
+## ✅ Recent Updates: Next.js 15 Import Compliance
+
+**Completed**: Full project refactoring to comply with Next.js 15 import recommendations:
+
+- ✅ **Absolute Paths**: All imports now use `@/` aliases instead of relative paths
+- ✅ **ES Modules**: Exclusive use of `import/export` syntax throughout
+- ✅ **Named Exports**: Components use named exports (except pages/layouts)
+- ✅ **Centralized Exports**: Proper index.js files for clean imports
+- ✅ **Feature-Sliced Architecture**: Organized imports by features, shared, API layers
+- ✅ **No Circular Dependencies**: Clean dependency graph maintained
+- ✅ **Import Order**: Consistent ordering (external → API → shared → features → local)
+
+**Validation Results:**
+
+- ✅ `npm run check:imports` - All files comply with Next.js 15 recommendations
+- ✅ `npm run check:circular` - No circular dependencies detected
+- ✅ `npm run lint` - ESLint passes without errors
+- ✅ `npm run build` - Production build successful
+
 ## Features
 
 - Next.js 15 with React 19

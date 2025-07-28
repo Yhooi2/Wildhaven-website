@@ -1,6 +1,6 @@
 import { Icon } from "@/app/_components/ui";
 import { ArrowRightStartOnRectangleIcon } from "@heroicons/react/24/outline";
-import { signOutUser } from "../actions/auth-actions";
+import { signOutUser } from "@/app/_features/auth/actions/auth-actions";
 
 export function SignOutButton() {
   const styleBytton =

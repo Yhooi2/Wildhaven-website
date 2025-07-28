@@ -1,5 +1,5 @@
-import { auth } from "../_api/auth";
-import { SectionHeading } from "../_components/ui";
+import { auth } from "@/app/_api/auth";
+import { SectionHeading } from "@/app/_components/ui";
 import { transliterate as tr } from "transliteration";
 
 export const metadata = {

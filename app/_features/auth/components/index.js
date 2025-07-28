@@ -1,6 +1,6 @@
-export { AuthHeader } from "./AuthHeader";
-export { LoginMessage } from "./LoginMessage";
-export { Protected } from "./Protected";
-export { AuthProviders } from "./AuthProviders";
-export { SigninButton } from "./SignInButton";
-export { SignOutButton } from "./SignOutButton";
+export { AuthHeader } from "@/app/_features/auth/components/AuthHeader";
+export { LoginMessage } from "@/app/_features/auth/components/LoginMessage";
+export { Protected } from "@/app/_features/auth/components/Protected";
+export { AuthProviders } from "@/app/_features/auth/components/AuthProviders";
+export { SigninButton } from "@/app/_features/auth/components/SignInButton";
+export { SignOutButton } from "@/app/_features/auth/components/SignOutButton";

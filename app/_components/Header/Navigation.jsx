@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { AuthHeader } from "../../_features/auth/components";
+import { AuthHeader } from "@/app/_features/auth/components";
 
 export const experimental_ppr = true;
 

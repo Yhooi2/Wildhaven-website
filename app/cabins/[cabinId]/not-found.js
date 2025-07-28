@@ -1,5 +1,5 @@
-import { BackButton } from "../../_components";
-import { Layout, ErrorHeading, Text } from "../../_components/ui";
+import { BackButton } from "@/app/_components";
+import { Layout, ErrorHeading, Text } from "@/app/_components/ui";
 
 function NotFound() {
   return (

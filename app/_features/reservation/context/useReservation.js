@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ReservationContext } from "./ReservationProvider";
+import { ReservationContext } from "@/app/_features/reservation/context/ReservationProvider";
 
 export function useReservation() {
   const context = useContext(ReservationContext);

@@ -1,7 +1,7 @@
 "use client";
 
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import { useReservation } from "../context";
+import { useReservation } from "@/app/_features/reservation/context/useReservation";
 import { format } from "date-fns";
 import { Icon } from "@/app/_components/ui";
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import { SigninButton } from "./SignInButton";
+import { SigninButton } from "@/app/_features/auth/components/SignInButton";
 
 export function AuthProviders() {
   const providers = ["Google", "Yandex"];

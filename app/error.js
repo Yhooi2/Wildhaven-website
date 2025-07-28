@@ -1,6 +1,6 @@
 "use client";
 
-import { Layout, ErrorHeading, Text, Button } from "./_components/ui";
+import { Layout, ErrorHeading, Text, Button } from "@/app/_components/ui";
 
 export default function Error({ error, reset }) {
   return (

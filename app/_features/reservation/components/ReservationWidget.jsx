@@ -1,8 +1,8 @@
 import { Container } from "@/app/_components/ui";
 import { getBookedDatesByCabinId, getSettings } from "@/app/_api/data-service";
 import { DateSelector } from "@/app/_entities/booking";
-import { ReservationForm } from "./ReservationForm";
-import { Protected } from "../../auth";
+import { ReservationForm } from "@/app/_features/reservation/components/ReservationForm";
+import { Protected } from "@/app/_features/auth";
 
 export async function ReservationWidget({ cabin }) {
   const [bookedDates, settings] = await Promise.all([

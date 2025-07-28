@@ -1,6 +1,9 @@
 import { auth } from "@/app/_api/auth";
-import { SectionHeading, Text } from "../../_components/ui";
-import { SelectCountry, UpdateProfileForm } from "./_components";
+import { SectionHeading, Text } from "@/app/_components/ui";
+import {
+  SelectCountry,
+  UpdateProfileForm,
+} from "@/app/account/profile/_components";
 import { getGuest } from "@/app/_api/data-service";
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import { getCabins } from "../_api/data-service";
+import { getCabins } from "@/app/_api/data-service";
 
 export const revalidate = 3600; // 1 hour
 

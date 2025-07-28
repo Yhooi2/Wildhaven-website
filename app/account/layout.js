@@ -1,5 +1,5 @@
-import { SignOutButton } from "../_features/auth/components";
-import { SideMenu } from "./SideMenu";
+import { SignOutButton } from "@/app/_features/auth/components";
+import { SideMenu } from "@/app/account/SideMenu";
 
 function Layout({ children }) {
   return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import image1 from "@/public/about-1.jpg";
-import { CabinsCounter } from "./CabinsCounter";
+import { CabinsCounter } from "@/app/about/CabinsCounter";
 import { Suspense } from "react";
 
 export const metadata = {

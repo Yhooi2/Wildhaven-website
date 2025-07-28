@@ -1,4 +1,4 @@
-import { signInWithProvider } from "../actions/auth-actions";
+import { signInWithProvider } from "@/app/_features/auth/actions/auth-actions";
 import Image from "next/image";
 
 export function SigninButton({ provider, children }) {

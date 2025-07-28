@@ -1,4 +1,4 @@
-import { TextExpander } from "@/app/_components/";
+import { TextExpander } from "@/app/_components";
 import { Container, Icon } from "@/app/_components/ui";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";

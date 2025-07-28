@@ -1,4 +1,4 @@
-import { Text } from "../_components/ui";
+import { Text } from "@/app/_components/ui";
 import { CabinCatalog } from "@/app/_entities/cabin";
 
 export const metadata = {

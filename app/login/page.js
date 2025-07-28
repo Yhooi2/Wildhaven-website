@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { Spinner } from "../_components/ui";
-import { AuthProviders } from "../_features/auth/components/";
+import { Spinner } from "@/app/_components/ui";
+import { AuthProviders } from "@/app/_features/auth/components/";
 
 export const metadata = {
   title: "Login",
