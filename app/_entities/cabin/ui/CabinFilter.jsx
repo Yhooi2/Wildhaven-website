@@ -1,4 +1,4 @@
-import { FilterButton } from "@/app/cabins/_components/FilterButton";
+import { FilterButton } from "@/app/_entities/cabin/ui/FilterButton";
 import { Container } from "@/app/_components/ui";
 
 export function CabinFilter({ filter }) {
