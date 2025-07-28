@@ -1,11 +1,11 @@
 import { Container } from "@/app/_components/ui";
 import { isPast } from "date-fns";
 import Image from "next/image";
-import { ReservationDate } from "./ReservationDate";
-import { ReservationDetails } from "./ReservationDetails";
-import { ReservationStatus } from "./ReservationStatus";
-import { ReservationButtonEdit } from "./ReservationButtonEdit";
-import { ReservationButtonDelete } from "./ReservationButtonDelete";
+import { ReservationDate } from "@/app/_features/reservation/components/ReservationDate";
+import { ReservationDetails } from "@/app/_features/reservation/components/ReservationDetails";
+import { ReservationStatus } from "@/app/_entities/reservation";
+import { ReservationButtonEdit } from "@/app/_features/reservation/components/ReservationButtonEdit";
+import { ReservationButtonDelete } from "@/app/_features/reservation/components/ReservationButtonDelete";
 
 export function ReservationCard({ reservation }) {
   const {

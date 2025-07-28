@@ -1,10 +1,10 @@
 import { Container } from "@/app/_components/ui";
 import { getBookedDatesByCabinId, getSettings } from "@/app/_api/data-service";
-import { DateSelector } from "./DateSelector";
+import { DateSelector } from "@/app/_entities/booking";
 import { ReservationForm } from "./ReservationForm";
 import { Protected } from "../../auth";
 
-export async function Reservation({ cabin }) {
+export async function ReservationWidget({ cabin }) {
   const [bookedDates, settings] = await Promise.all([
     getBookedDatesByCabinId(cabin.id),
     getSettings(),

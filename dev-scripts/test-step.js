@@ -105,7 +105,7 @@ async function runTests() {
   const componentFiles = [
     "app/_features/reservation/components/DateSelector.jsx",
     "app/_features/reservation/components/DateSelector.styles.js",
-    "app/_features/reservation/components/ui/PriceDisplay.jsx",
+    "app/_entities/booking/ui/PriceDisplay/PriceDisplay.jsx",
     "app/_features/reservation/components/ui/BookingSummary.jsx",
     "app/_features/reservation/components/ui/ClearButton.jsx",
     "app/_features/reservation/components/ui/index.js",

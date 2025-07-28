@@ -1,5 +1,6 @@
 import { getCabins } from "../../_api/data-service";
-import { CabinCard } from "./CabinCard";
+import { CabinCard } from "@/app/_entities/cabin";
+import { filterCabins } from "@/app/_entities/cabin";
 // import { unstable_noStore } from "next/cache";
 
 export async function CabinList({ filter }) {
@@ -8,19 +9,22 @@ export async function CabinList({ filter }) {
   let cabins = await getCabins();
 
   if (filter !== "all") {
+    const filterCriteria = {};
+
     switch (filter) {
       case "small":
-        cabins = cabins.filter((cabin) => cabin.maxCapacity <= 3);
+        filterCriteria.maxCapacity = 3;
         break;
       case "medium":
-        cabins = cabins.filter(
-          (cabin) => cabin.maxCapacity >= 4 && cabin.maxCapacity <= 6
-        );
+        filterCriteria.minCapacity = 4;
+        filterCriteria.maxCapacity = 6;
         break;
       case "large":
-        cabins = cabins.filter((cabin) => cabin.maxCapacity >= 7);
+        filterCriteria.minCapacity = 7;
         break;
     }
+
+    cabins = filterCabins(cabins, filterCriteria);
   }
 
   if (!cabins.length) return null;

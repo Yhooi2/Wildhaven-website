@@ -1,7 +1,7 @@
 import { auth } from "@/app/_api/auth";
 import { getBookings } from "@/app/_api/data-service";
 import { SectionHeading } from "@/app/_components/ui";
-import { ReservationCard } from "./ReservationCard";
+import { ReservationCard } from "@/app/_entities/reservation";
 
 export async function ReservationsList() {
   const session = await auth();

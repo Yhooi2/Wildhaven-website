@@ -9,6 +9,7 @@ A modern website for Wildhaven cabins and accommodations.
 - Responsive design with Tailwind CSS
 - Cabin booking system
 - User account management
+- Entity-based architecture with Feature-Sliced Design
 
 ## Dependencies
 
@@ -38,6 +39,62 @@ A modern website for Wildhaven cabins and accommodations.
 ```bash
 npm install
 npm run dev
+```
+
+## 🛠️ Development Tools & Scripts
+
+### Automated Testing & Validation
+
+```bash
+# Comprehensive project validation
+npm run check:step
+
+# Circular dependency detection
+npm run check:circular
+
+# Import compliance verification
+npm run check:imports
+
+# Production build verification
+npm run build
+
+# Code quality checks
+npm run lint
+```
+
+### Migration Workflow
+
+The project uses an entity-based architecture with automated migration tools:
+
+1. **Create Structure**: Set up entity directories and index files
+2. **Move Components**: Transfer components to appropriate entity UI layers
+3. **Update Imports**: Convert all imports to absolute paths
+4. **Create Models**: Implement business logic in model layers
+5. **Verify**: Run comprehensive checks
+6. **Clean Up**: Remove old files and update documentation
+
+### Architecture Guidelines
+
+- **Absolute Paths**: All imports use `@/` aliases
+- **Named Exports**: Components use named exports (except pages/layouts)
+- **Centralized Exports**: Each layer has an index.js with centralized exports
+- **No Circular Dependencies**: Strict dependency management
+
+### Entity Structure
+
+```
+_entities/
+├── {entity}/
+│   ├── ui/           # UI components
+│   │   ├── {Component}/
+│   │   │   ├── {Component}.jsx
+│   │   │   └── index.js
+│   │   └── index.js
+│   ├── model/        # Business logic
+│   │   ├── {entity}-types.js
+│   │   ├── {entity}-utils.js
+│   │   └── index.js
+│   └── index.js      # Main entity export
 ```
 
 ## MCP Tools Setup

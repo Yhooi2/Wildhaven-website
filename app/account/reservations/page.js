@@ -1,5 +1,5 @@
 import { SectionHeading, Spinner } from "@/app/_components/ui";
-import { ReservationsList } from "@/app/_features/reservation/components";
+import { ReservationsList } from "@/app/_entities/reservation";
 import { Suspense } from "react";
 
 export const metadata = {

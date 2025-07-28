@@ -14,7 +14,13 @@
     "graph:deps": "madge --image deps-graph.png --extensions js,jsx app/",
     "analyze:detailed": "node scripts/analyze-dependencies.js",
     "report:deps": "node scripts/generate-dependency-report.js",
-    "check:circular": "node scripts/check-circular-deps.js"
+    "check:circular": "node scripts/check-circular-deps.js",
+    "check:step": "node scripts/check-step.js",
+    "check:quick": "node scripts/check-step.js --quick",
+    "check:full": "node scripts/check-step.js --step 'Full Project Check'",
+    "check:imports": "node scripts/check-imports-compliance.js",
+    "test:quick": "node scripts/quick-test.js",
+    "test:after": "node scripts/test-after-step.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

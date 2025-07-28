@@ -1,5 +1,5 @@
 "use client";
-import { useReservation } from "../context";
+import { useReservation } from "@/app/_features/reservation/context";
 import { addMonths, differenceInDays } from "date-fns";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
@@ -8,8 +8,9 @@ import {
   DAY_PICKER_CLASS_NAMES,
   MODIFIERS_CLASS_NAMES,
 } from "./DateSelector.styles";
-import { PriceDisplay, BookingSummary, ClearButton } from "./ui";
-import { calculatePricing } from "../utils";
+import { PriceDisplay, BookingSummary } from "@/app/_entities/booking";
+import { ClearButton } from "@/app/_features/reservation/components/ui";
+import { calculatePricing } from "@/app/_entities/booking";
 
 export function DateSelector({
   minBookingLength,

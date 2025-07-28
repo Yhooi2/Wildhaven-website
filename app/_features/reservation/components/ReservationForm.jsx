@@ -1,6 +1,6 @@
 import { Button } from "@/app/_components/ui";
 import { AuthHeader } from "@/app/_features/auth";
-import { GuestSelector } from "./GuestSelector";
+import { GuestSelector } from "@/app/_entities/booking";
 export async function ReservationForm({ maxCapacity }) {
   return (
     <div>

@@ -2,7 +2,7 @@
 
 ## 🏗️ Project Structure Overview
 
-This document describes the comprehensive refactoring and modernization of the Wildhaven project architecture.
+This document describes the comprehensive refactoring and modernization of the Wildhaven project architecture, transitioning from feature-based to entity-based architecture.
 
 ## 📁 Directory Structure
 
@@ -32,6 +32,62 @@ app/
 │   ├── ErrorLayout.jsx
 │   ├── TextExpander.jsx
 │   └── index.js
+├── _entities/              # Entity-based architecture (NEW)
+│   ├── booking/            # Booking entity
+│   │   ├── ui/            # Booking UI components
+│   │   │   ├── PriceDisplay/
+│   │   │   │   ├── PriceDisplay.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── GuestSelector/
+│   │   │   │   ├── GuestSelector.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── DateSelector/
+│   │   │   │   ├── DateSelector.jsx
+│   │   │   │   ├── DateSelector.styles.js
+│   │   │   │   └── index.js
+│   │   │   ├── BookingSummary/
+│   │   │   │   ├── BookingSummary.jsx
+│   │   │   │   └── index.js
+│   │   │   └── index.js
+│   │   ├── model/         # Booking business logic
+│   │   │   ├── booking-types.js
+│   │   │   ├── booking-utils.js
+│   │   │   └── index.js
+│   │   └── index.js
+│   ├── reservation/        # Reservation entity
+│   │   ├── ui/            # Reservation UI components
+│   │   │   ├── ReservationStatus/
+│   │   │   │   ├── ReservationStatus.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── ReservationCard/
+│   │   │   │   ├── ReservationCard.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── ReservationsList/
+│   │   │   │   ├── ReservationsList.jsx
+│   │   │   │   └── index.js
+│   │   │   └── index.js
+│   │   ├── model/         # Reservation business logic
+│   │   │   ├── reservation-types.js
+│   │   │   ├── reservation-utils.js
+│   │   │   └── index.js
+│   │   └── index.js
+│   └── cabin/             # Cabin entity
+│       ├── ui/            # Cabin UI components
+│       │   ├── CabinCard/
+│       │   │   ├── CabinCard.jsx
+│       │   │   └── index.js
+│       │   ├── CabinDetails/
+│       │   │   ├── CabinDetails.jsx
+│       │   │   └── index.js
+│       │   ├── CabinCatalog/
+│       │   │   ├── CabinCatalog.jsx
+│       │   │   └── index.js
+│       │   └── index.js
+│       ├── model/         # Cabin business logic
+│       │   ├── cabin-types.js
+│       │   ├── cabin-utils.js
+│       │   └── index.js
+│       └── index.js
 ├── _features/              # Feature-based architecture
 │   ├── auth/               # Authentication feature
 │   │   ├── actions/
@@ -45,31 +101,17 @@ app/
 │   │   │   ├── SignOutButton.jsx
 │   │   │   └── index.js
 │   │   └── index.js
-│   └── reservation/        # Reservation feature
+│   └── reservation/        # Reservation feature (simplified)
 │       ├── components/     # Feature components
 │       │   ├── ui/        # Feature-specific UI
-│       │   │   ├── BookingSummary.jsx
 │       │   │   ├── ClearButton.jsx
-│       │   │   ├── PriceDisplay.jsx
-│       │   │   ├── ReservationStatus.jsx
 │       │   │   └── index.js
-│       │   ├── DateSelector.jsx
-│       │   ├── DateSelector.styles.js
-│       │   ├── GuestSelector.jsx
-│       │   ├── Reservation.jsx
-│       │   ├── ReservationCard.jsx
-│       │   ├── ReservationDate.jsx
+│       │   ├── ReservationWidget.jsx
 │       │   ├── ReservationForm.jsx
-│       │   ├── ReservationRemainder.jsx
-│       │   ├── ReservationsList.jsx
 │       │   └── index.js
 │       ├── context/        # Feature context
 │       │   ├── ReservationProvider.jsx
 │       │   ├── useReservation.js
-│       │   └── index.js
-│       ├── utils/          # Feature utilities
-│       │   ├── dateHelpers.js
-│       │   ├── pricing.js
 │       │   └── index.js
 │       └── index.js
 ├── _styles/                # Global styles
@@ -89,8 +131,6 @@ app/
 │   └── page.js
 ├── cabins/                 # Cabins pages
 │   ├── _components/
-│   │   ├── Cabin.jsx
-│   │   ├── CabinCard.jsx
 │   │   ├── CabinFilter.jsx
 │   │   ├── CabinList.jsx
 │   │   ├── FilterButton.jsx
@@ -100,121 +140,147 @@ app/
 │   │   └── page.js
 │   ├── loading.js
 │   └── page.js
-├── about/
+├── about/                  # About page
 │   ├── CabinsCounter.jsx
 │   └── page.js
-├── api/
-│   └── auth/
-│       └── [...nextauth]/
-│           └── route.js
-├── login/
+├── login/                  # Login page
 │   └── page.js
-├── error.js
-├── icon.png
-├── layout.js
-├── loading.js
-├── not-found.js
-└── page.js
+├── error.js               # Error boundary
+├── loading.js             # Loading component
+├── not-found.js           # 404 page
+├── layout.js              # Root layout
+└── page.js                # Home page
 ```
 
-## 🔄 Refactoring Summary
+## 🔄 Migration Status
 
-### 1. File Extension Standardization
+### ✅ Completed Migrations
 
-- **46 React components** renamed from `.js` to `.jsx`
-- **Utilities and configs** kept as `.js` files
-- **Better type safety** and IDE support
+#### Booking Entity
 
-### 2. Centralized Exports Implementation
+- **PriceDisplay** → `app/_entities/booking/ui/PriceDisplay/`
+- **GuestSelector** → `app/_entities/booking/ui/GuestSelector/`
+- **DateSelector** → `app/_entities/booking/ui/DateSelector/`
+- **BookingSummary** → `app/_entities/booking/ui/BookingSummary/`
 
-- **13 index.js files** created for centralized exports
-- **Consistent import patterns** across the project
-- **Cleaner imports** using destructuring
-- **Feature-based exports** for auth and reservation components
+#### Reservation Entity
 
-### 3. Feature-Sliced Architecture
+- **ReservationStatus** → `app/_entities/reservation/ui/ReservationStatus/`
+- **ReservationCard** → `app/_entities/reservation/ui/ReservationCard/`
+- **ReservationsList** → `app/_entities/reservation/ui/ReservationsList/`
 
-- **Reservation feature** moved to `_features/reservation/` with 16 components
-- **Auth feature** added to `_features/auth/` with complete authentication components (6 components)
-- **Complete feature structure**: components, context, utils (useReservation moved to context/)
-- **Colocation of styles** with components (DateSelector.styles.js)
-- **Modular architecture** for scalability
+#### Cabin Entity
 
-### 4. Code Organization
+- **CabinCard** → `app/_entities/cabin/ui/CabinCard/`
+- **CabinDetails** → `app/_entities/cabin/ui/CabinDetails/`
+- **CabinCatalog** → `app/_entities/cabin/ui/CabinCatalog/` (new widget)
 
-- **Added authentication system** with complete auth feature structure (6 auth components)
-- **Enhanced reservation components** with additional UI components (16 total components)
-- **Updated all imports** to use centralized exports
-- **Consistent naming conventions**
-- **Better separation of concerns**
+### 📋 Model Layers
+
+#### Booking Model
+
+- `booking-types.js` - Type definitions and constants
+- `booking-utils.js` - Pricing calculations, date helpers
+
+#### Reservation Model
+
+- `reservation-types.js` - Type definitions
+- `reservation-utils.js` - Reservation management utilities
+
+#### Cabin Model
+
+- `cabin-types.js` - Cabin type definitions and constants
+- `cabin-utils.js` - Filtering, sorting, validation utilities
 
 ## 🎯 Architecture Principles
 
-### Feature-Sliced Design (FSD)
+### Entity-Based Structure
 
-- **Features** contain business logic
-- **Shared** components are reusable
-- **UI** components are base building blocks
-- **API** layer handles data operations
+- **Separation of Concerns**: UI components, business logic, and data models are clearly separated
+- **Reusability**: Components can be easily reused across different features
+- **Maintainability**: Changes to business logic don't affect UI components
+- **Scalability**: New entities can be added without affecting existing ones
 
-### Next.js 15 Best Practices
+### Import Guidelines (Next.js 15)
 
-- **App Router** structure
-- **Server Components** by default
-- **Client Components** when needed
-- **Colocation** of related files
+- **Absolute Paths**: All imports use `@/` aliases
+- **Named Exports**: Components use named exports (except pages/layouts)
+- **Centralized Exports**: Each layer has an index.js with centralized exports
+- **No Circular Dependencies**: Strict dependency management
 
-### Code Quality
+### File Organization
 
-- **ESLint** for code quality
-- **Prettier** for formatting
-- **Automated testing** scripts
-- **Type safety** with .jsx extensions
-
-## 🚀 Benefits
-
-1. **Maintainability**: Clear structure and separation of concerns
-2. **Scalability**: Easy to add new features (auth and reservation as examples)
-3. **Reusability**: Centralized exports and shared components
-4. **Type Safety**: .jsx extensions for React components
-5. **Developer Experience**: Better IDE support and navigation
-6. **Testing**: Automated scripts for project verification
-7. **Authentication**: Complete auth system with 6 reusable components
-8. **Reservation System**: Enhanced booking functionality with 19 components
-
-## 📋 Migration Checklist
-
-- ✅ Renamed 46 React components to .jsx
-- ✅ Created 13 index.js files for exports
-- ✅ Updated all imports to use centralized exports
-- ✅ Moved reservation logic to feature folder
-- ✅ Added authentication feature with complete structure (6 components)
-- ✅ Enhanced reservation components with additional UI components (16 total)
-- ✅ Moved useReservation hook to context/ directory
-- ✅ Added colocated styles (DateSelector.styles.js)
-- ✅ Verified build and linting
-- ✅ Created automated testing scripts
-- ✅ Documented architecture changes
-
-## 🔧 Testing
-
-Run the following commands to verify project integrity:
-
-```bash
-npm run lint          # Check code quality
-npm run build         # Verify build process
-npm run dev           # Test development server
-node scripts/quick-test.js  # Run automated tests
+```
+_entities/
+├── {entity}/
+│   ├── ui/           # UI components
+│   │   ├── {Component}/
+│   │   │   ├── {Component}.jsx
+│   │   │   └── index.js
+│   │   └── index.js
+│   ├── model/        # Business logic
+│   │   ├── {entity}-types.js
+│   │   ├── {entity}-utils.js
+│   │   └── index.js
+│   └── index.js      # Main entity export
 ```
 
-## 📚 Related Files
+## 🛠️ Development Tools
 
-- `MCP_QUICK_START.md` - MCP tools setup
-- `MCP_CHEATSHEET.md` - MCP commands reference
-- `scripts/quick-test.js` - Automated testing script
-- `scripts/test-after-step.js` - Step-by-step testing
+### Automated Testing Scripts
+
+- `npm run check:step` - Comprehensive project validation
+- `npm run check:circular` - Circular dependency detection
+- `npm run check:imports` - Import compliance verification
+- `npm run build` - Production build verification
+- `npm run lint` - Code quality checks
+
+### Migration Workflow
+
+1. **Create Structure**: Set up entity directories and index files
+2. **Move Components**: Transfer components to appropriate entity UI layers
+3. **Update Imports**: Convert all imports to absolute paths
+4. **Create Models**: Implement business logic in model layers
+5. **Verify**: Run comprehensive checks
+6. **Clean Up**: Remove old files and update documentation
+
+## 📊 Quality Metrics
+
+### Success Criteria
+
+- ✅ No ESLint warnings or errors
+- ✅ Successful production build
+- ✅ No circular dependencies
+- ✅ All imports use absolute paths
+- ✅ Components use named exports
+- ✅ Centralized exports properly configured
+
+### Performance Impact
+
+- **Build Time**: Optimized through better dependency management
+- **Bundle Size**: Reduced through proper tree-shaking
+- **Developer Experience**: Improved through clear structure and tooling
+
+## 🔮 Future Roadmap
+
+### Phase 2: Feature Migration
+
+- Migrate remaining feature components to appropriate entities
+- Implement shared state management
+- Add comprehensive testing
+
+### Phase 3: Advanced Features
+
+- Implement advanced filtering and sorting
+- Add real-time updates
+- Optimize for mobile performance
+
+### Phase 4: Documentation
+
+- Complete API documentation
+- Add component storybook
+- Create development guidelines
 
 ---
 
-_Last updated: December 2024_
-_Architecture: Feature-Sliced Design with Next.js 15_
+_This architecture follows Feature-Sliced Design (FSD) principles and Next.js 15 best practices._

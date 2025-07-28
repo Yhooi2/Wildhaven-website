@@ -1,7 +1,5 @@
-import { Suspense } from "react";
-import { Text, Spinner } from "../_components/ui";
-import { ReservationRemainder } from "../_features/reservation/components";
-import { CabinFilter, CabinList } from "./_components";
+import { Text } from "../_components/ui";
+import { CabinCatalog } from "@/app/_entities/cabin";
 
 export const metadata = {
   title: "Cabins",
@@ -26,11 +24,7 @@ async function Page({ searchParams }) {
         home away from home. The perfect spot for a peaceful, calm vacation.
         Welcome to paradise.
       </Text>
-      <CabinFilter filter={filter} />
-      <Suspense fallback={<Spinner />} key={filter}>
-        <CabinList filter={filter} />
-        <ReservationRemainder />
-      </Suspense>
+      <CabinCatalog filter={filter} />
     </div>
   );
 }
