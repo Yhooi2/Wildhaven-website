@@ -7,4 +7,4 @@ async function CabinsCounter() {
   return <span>{counts.length}</span>;
 }
 
-export default CabinsCounter;
+export { CabinsCounter };

@@ -1,2 +1,2 @@
-export * from "./deleteReservations";
-export * from "./updateProfile";
+export { deleteReservations } from "./deleteReservations";
+export { updateProfile } from "./updateProfile";

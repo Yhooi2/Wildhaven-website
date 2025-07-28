@@ -1,5 +1,5 @@
 // Main components exports
-export * from "./Header";
-export * from "./BackButton";
-export * from "./ErrorLayout";
-export * from "./TextExpander";
+export { Header, Logo, Navigation } from "./Header";
+export { BackButton } from "./BackButton";
+export { ErrorLayout } from "./ErrorLayout";
+export { TextExpander } from "./TextExpander";

@@ -39,4 +39,4 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
   );
 }
 
-export default SelectCountry;
+export { SelectCountry };

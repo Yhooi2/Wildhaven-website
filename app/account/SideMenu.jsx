@@ -56,4 +56,4 @@ function SideMenu({ children }) {
   );
 }
 
-export default SideMenu;
+export { SideMenu };

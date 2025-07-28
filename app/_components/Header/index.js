@@ -1,4 +1,4 @@
 // Header components exports
-export { default as Header } from "./Header.jsx";
-export { default as Logo } from "./Logo.jsx";
-export { default as Navigation } from "./Navigation.jsx";
+export { Header } from "./Header.jsx";
+export { Logo } from "./Logo.jsx";
+export { Navigation } from "./Navigation.jsx";

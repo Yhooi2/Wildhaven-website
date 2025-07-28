@@ -34,7 +34,7 @@ function UpdateProfileForm({ children, guest }) {
   );
 }
 
-export default UpdateProfileForm;
+export { UpdateProfileForm };
 
 function FormButton() {
   const { pending } = useFormStatus();

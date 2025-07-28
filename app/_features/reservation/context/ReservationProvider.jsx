@@ -9,7 +9,7 @@ const initialState = {
   to: undefined,
 };
 
-export default function ReservationProvider({ children }) {
+export function ReservationProvider({ children }) {
   const [range, setRange] = useState(initialState);
   const [cabinId, setCabinId] = useState(null);
 

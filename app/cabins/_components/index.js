@@ -1,6 +1,6 @@
 // Cabins components exports
-export * from "./Cabin";
-export * from "./CabinCard";
-export * from "./CabinFilter";
-export * from "./CabinList";
-export * from "./FilterButton";
+export { Cabin } from "./Cabin";
+export { CabinCard } from "./CabinCard";
+export { CabinFilter } from "./CabinFilter";
+export { CabinList } from "./CabinList";
+export { FilterButton } from "./FilterButton";
