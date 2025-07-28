@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input } from "@/app/_components/ui";
-import { updateProfile } from "@/app/account/profile/actions";
+import { updateProfile } from "@/app/_features/guest/actions";
 import { useFormStatus } from "react-dom";
 
 function UpdateProfileForm({ children, guest }) {

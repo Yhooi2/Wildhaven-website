@@ -3,7 +3,7 @@ import Image from "next/image";
 
 // Let's imagine your colleague already built this component 😃
 
-async function SelectCountry({ defaultCountry, name, id, className }) {
+export async function SelectCountry({ defaultCountry, name, id, className }) {
   const countries = await getCountries();
   const flag =
     countries.find((country) => country.name === defaultCountry)?.flag ?? "";
@@ -38,5 +38,3 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
     </div>
   );
 }
-
-export { SelectCountry };

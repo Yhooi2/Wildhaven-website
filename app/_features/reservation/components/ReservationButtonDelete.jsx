@@ -1,7 +1,7 @@
 "use client";
 
 import { TrashIcon } from "@heroicons/react/24/solid";
-import { deleteReservations } from "@/app/account/profile/actions";
+import { deleteReservations } from "@/app/_features/guest/actions";
 
 export function ReservationButtonDelete({ id }) {
   return (
