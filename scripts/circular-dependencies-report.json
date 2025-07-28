@@ -15,10 +15,7 @@
   },
   "circularDependencies": [
     {
-      "cycle": [
-        "_components/Header/Header.jsx",
-        "_components/Header/index.js"
-      ],
+      "cycle": ["_components/Header/Header.jsx", "_components/Header/index.js"],
       "length": 2,
       "modules": [
         "_components/Header/Header.jsx",
@@ -167,10 +164,7 @@
     }
   ],
   "allCycles": [
-    [
-      "_components/Header/Header.jsx",
-      "_components/Header/index.js"
-    ],
+    ["_components/Header/Header.jsx", "_components/Header/index.js"],
     [
       "_features/auth/components/index.js",
       "_features/auth/components/AuthProviders.jsx"
@@ -195,34 +189,18 @@
       "_features/reservation/components/index.js",
       "_features/reservation/components/ReservationsList.jsx"
     ],
-    [
-      "cabins/_components/CabinFilter.jsx",
-      "cabins/_components/index.js"
-    ],
-    [
-      "cabins/_components/index.js",
-      "cabins/_components/CabinList.jsx"
-    ]
+    ["cabins/_components/CabinFilter.jsx", "cabins/_components/index.js"],
+    ["cabins/_components/index.js", "cabins/_components/CabinList.jsx"]
   ],
   "dependencyTree": {
-    "_api/auth.js": [
-      "_api/data-service.js"
-    ],
-    "_api/data-service.js": [
-      "_api/supabase.js"
-    ],
+    "_api/auth.js": ["_api/data-service.js"],
+    "_api/data-service.js": ["_api/supabase.js"],
     "_api/supabase.js": [],
-    "_components/BackButton.jsx": [
-      "_components/ui/index.js"
-    ],
+    "_components/BackButton.jsx": ["_components/ui/index.js"],
     "_components/ErrorLayout.jsx": [],
-    "_components/Header/Header.jsx": [
-      "_components/Header/index.js"
-    ],
+    "_components/Header/Header.jsx": ["_components/Header/index.js"],
     "_components/Header/Logo.jsx": [],
-    "_components/Header/Navigation.jsx": [
-      "_features/auth/components/index.js"
-    ],
+    "_components/Header/Navigation.jsx": ["_features/auth/components/index.js"],
     "_components/Header/index.js": [
       "_components/Header/Header.jsx",
       "_components/Header/Logo.jsx",
@@ -278,9 +256,7 @@
       "_features/auth/components/SignInButton.jsx",
       "_features/auth/components/SignOutButton.jsx"
     ],
-    "_features/auth/index.js": [
-      "_features/auth/components/index.js"
-    ],
+    "_features/auth/index.js": ["_features/auth/components/index.js"],
     "_features/reservation/components/DateSelector.jsx": [
       "_features/reservation/components/DateSelector.styles.js",
       "_features/reservation/components/ui/index.js",
@@ -356,23 +332,14 @@
       "_features/reservation/utils/pricing.js"
     ],
     "_features/reservation/utils/pricing.js": [],
-    "about/CabinsCounter.jsx": [
-      "_api/data-service.js"
-    ],
-    "about/page.js": [
-      "about/CabinsCounter.jsx"
-    ],
-    "account/SideMenu.jsx": [
-      "_components/ui/index.js"
-    ],
+    "about/CabinsCounter.jsx": ["_api/data-service.js"],
+    "about/page.js": ["about/CabinsCounter.jsx"],
+    "account/SideMenu.jsx": ["_components/ui/index.js"],
     "account/layout.js": [
       "_features/auth/components/index.js",
       "account/SideMenu.jsx"
     ],
-    "account/page.js": [
-      "_api/auth.js",
-      "_components/ui/index.js"
-    ],
+    "account/page.js": ["_api/auth.js", "_components/ui/index.js"],
     "account/profile/_components/SelectCountry.jsx": [],
     "account/profile/_components/UpdateProfileForm.jsx": [
       "account/profile/actions/index.js"
@@ -398,9 +365,7 @@
     ],
     "cabins/[cabinId]/page.js": [],
     "cabins/_components/Cabin.jsx": [],
-    "cabins/_components/CabinCard.jsx": [
-      "_components/ui/index.js"
-    ],
+    "cabins/_components/CabinCard.jsx": ["_components/ui/index.js"],
     "cabins/_components/CabinFilter.jsx": [
       "_components/ui/index.js",
       "cabins/_components/index.js"
@@ -417,32 +382,20 @@
       "cabins/_components/CabinList.jsx",
       "cabins/_components/FilterButton.jsx"
     ],
-    "cabins/loading.js": [
-      "_components/ui/index.js"
-    ],
+    "cabins/loading.js": ["_components/ui/index.js"],
     "cabins/page.js": [
       "_components/ui/index.js",
       "_features/reservation/components/index.js",
       "cabins/_components/index.js"
     ],
-    "error.js": [
-      "_components/ui/index.js"
-    ],
-    "layout.js": [
-      "_components/index.js",
-      "_features/reservation/index.js"
-    ],
-    "loading.js": [
-      "_components/ui/index.js"
-    ],
+    "error.js": ["_components/ui/index.js"],
+    "layout.js": ["_components/index.js", "_features/reservation/index.js"],
+    "loading.js": ["_components/ui/index.js"],
     "login/page.js": [
       "_components/ui/index.js",
       "_features/auth/components/index.js"
     ],
-    "not-found.js": [
-      "_components/index.js",
-      "_components/ui/index.js"
-    ],
+    "not-found.js": ["_components/index.js", "_components/ui/index.js"],
     "page.js": []
   }
 }

@@ -1,4 +1,4 @@
-import { SigninButton } from "./";
+import { SigninButton } from "./SignInButton";
 
 export function AuthProviders() {
   const providers = ["Google", "Yandex"];

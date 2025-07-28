@@ -1,5 +1,5 @@
 import { getCabins } from "../../_api/data-service";
-import { CabinCard } from "./";
+import { CabinCard } from "./CabinCard";
 // import { unstable_noStore } from "next/cache";
 
 export async function CabinList({ filter }) {

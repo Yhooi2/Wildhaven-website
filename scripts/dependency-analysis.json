@@ -1,10 +1,10 @@
 {
   "summary": {
     "totalFiles": 85,
-    "totalDependencies": 146,
+    "totalDependencies": 148,
     "totalExternal": 93,
-    "totalInternal": 53,
-    "averageDependencies": 1.7176470588235293
+    "totalInternal": 55,
+    "averageDependencies": 1.7411764705882353
   },
   "filesByDependencies": [
     [
@@ -100,6 +100,41 @@
         "externalCount": 3,
         "internalCount": 4,
         "totalCount": 7
+      }
+    ],
+    [
+      "app/_features/reservation/components/Reservation.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@/app/_components/ui",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "@/app/_api/data-service",
+            "line": 2
+          },
+          {
+            "type": "internal",
+            "path": "./DateSelector",
+            "line": 3
+          },
+          {
+            "type": "internal",
+            "path": "./ReservationForm",
+            "line": 4
+          },
+          {
+            "type": "internal",
+            "path": "../../auth",
+            "line": 5
+          }
+        ],
+        "externalCount": 2,
+        "internalCount": 3,
+        "totalCount": 5
       }
     ],
     [
@@ -203,36 +238,6 @@
       }
     ],
     [
-      "app/_features/reservation/components/Reservation.jsx",
-      {
-        "dependencies": [
-          {
-            "type": "external",
-            "path": "@/app/_components/ui",
-            "line": 1
-          },
-          {
-            "type": "external",
-            "path": "@/app/_api/data-service",
-            "line": 2
-          },
-          {
-            "type": "internal",
-            "path": "./",
-            "line": 3
-          },
-          {
-            "type": "internal",
-            "path": "../../auth",
-            "line": 4
-          }
-        ],
-        "externalCount": 2,
-        "internalCount": 2,
-        "totalCount": 4
-      }
-    ],
-    [
       "app/_features/reservation/components/ReservationsList.jsx",
       {
         "dependencies": [
@@ -253,7 +258,7 @@
           },
           {
             "type": "internal",
-            "path": "./",
+            "path": "./ReservationCard",
             "line": 4
           }
         ],
@@ -474,13 +479,18 @@
       "dependencies": [
         {
           "type": "internal",
-          "path": "./",
+          "path": "./Logo",
           "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "./Navigation",
+          "line": 2
         }
       ],
       "externalCount": 0,
-      "internalCount": 1,
-      "totalCount": 1
+      "internalCount": 2,
+      "totalCount": 2
     },
     "app/_components/Header/Logo.jsx": {
       "dependencies": [
@@ -643,7 +653,7 @@
       "dependencies": [
         {
           "type": "internal",
-          "path": "./",
+          "path": "./SignInButton",
           "line": 1
         }
       ],
@@ -677,7 +687,7 @@
         },
         {
           "type": "internal",
-          "path": ".",
+          "path": "./LoginMessage",
           "line": 2
         }
       ],
@@ -804,18 +814,23 @@
         },
         {
           "type": "internal",
-          "path": "./",
+          "path": "./DateSelector",
           "line": 3
         },
         {
           "type": "internal",
-          "path": "../../auth",
+          "path": "./ReservationForm",
           "line": 4
+        },
+        {
+          "type": "internal",
+          "path": "../../auth",
+          "line": 5
         }
       ],
       "externalCount": 2,
-      "internalCount": 2,
-      "totalCount": 4
+      "internalCount": 3,
+      "totalCount": 5
     },
     "app/_features/reservation/components/ReservationButtonDelete.jsx": {
       "dependencies": [
@@ -936,7 +951,7 @@
         },
         {
           "type": "internal",
-          "path": "./",
+          "path": "./GuestSelector",
           "line": 3
         }
       ],
@@ -1001,7 +1016,7 @@
         },
         {
           "type": "internal",
-          "path": "./",
+          "path": "./ReservationCard",
           "line": 4
         }
       ],
@@ -1071,7 +1086,7 @@
         },
         {
           "type": "internal",
-          "path": "./",
+          "path": "./ReservationProvider",
           "line": 2
         }
       ],
@@ -1477,7 +1492,7 @@
       "dependencies": [
         {
           "type": "internal",
-          "path": "./",
+          "path": "./FilterButton",
           "line": 1
         },
         {
@@ -1499,7 +1514,7 @@
         },
         {
           "type": "internal",
-          "path": "./",
+          "path": "./CabinCard",
           "line": 2
         },
         {

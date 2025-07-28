@@ -1,6 +1,7 @@
 import { Container } from "@/app/_components/ui";
 import { getBookedDatesByCabinId, getSettings } from "@/app/_api/data-service";
-import { DateSelector, ReservationForm } from "./";
+import { DateSelector } from "./DateSelector";
+import { ReservationForm } from "./ReservationForm";
 import { Protected } from "../../auth";
 
 export async function Reservation({ cabin }) {

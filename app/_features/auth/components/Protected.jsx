@@ -1,5 +1,5 @@
 import { auth } from "@/app/_api/auth";
-import { LoginMessage } from ".";
+import { LoginMessage } from "./LoginMessage";
 
 export async function Protected({ children }) {
   const session = await auth();
