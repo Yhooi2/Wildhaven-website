@@ -1,0 +1,870 @@
+{
+  "metadata": {
+    "generatedAt": "2025-07-28T11:28:12.451Z",
+    "appDirectory": "./app",
+    "totalModules": 84,
+    "totalDependencies": 108,
+    "circularDependenciesCount": 9
+  },
+  "statistics": {
+    "averageDependencies": 1.2857142857142858,
+    "maxDependencies": 13,
+    "minDependencies": 0,
+    "dependencyDensity": 0.01549053356282272
+  },
+  "dependencyTree": {
+    "_api/auth.js": [
+      "_api/data-service.js"
+    ],
+    "_api/data-service.js": [
+      "_api/supabase.js"
+    ],
+    "_api/supabase.js": [],
+    "_components/BackButton.jsx": [
+      "_components/ui/index.js"
+    ],
+    "_components/ErrorLayout.jsx": [],
+    "_components/Header/Header.jsx": [
+      "_components/Header/index.js"
+    ],
+    "_components/Header/Logo.jsx": [],
+    "_components/Header/Navigation.jsx": [
+      "_features/auth/components/index.js"
+    ],
+    "_components/Header/index.js": [
+      "_components/Header/Header.jsx",
+      "_components/Header/Logo.jsx",
+      "_components/Header/Navigation.jsx"
+    ],
+    "_components/TextExpander.jsx": [],
+    "_components/index.js": [
+      "_components/BackButton.jsx",
+      "_components/ErrorLayout.jsx",
+      "_components/Header/index.js",
+      "_components/TextExpander.jsx"
+    ],
+    "_components/ui/Button.jsx": [],
+    "_components/ui/Container.jsx": [],
+    "_components/ui/Heading.jsx": [],
+    "_components/ui/Icon.jsx": [],
+    "_components/ui/Input.jsx": [],
+    "_components/ui/Layout.jsx": [],
+    "_components/ui/Spinner.jsx": [],
+    "_components/ui/SpinnerMini.jsx": [],
+    "_components/ui/Text.jsx": [],
+    "_components/ui/index.js": [
+      "_components/ui/Button.jsx",
+      "_components/ui/Container.jsx",
+      "_components/ui/Heading.jsx",
+      "_components/ui/Icon.jsx",
+      "_components/ui/Input.jsx",
+      "_components/ui/Layout.jsx",
+      "_components/ui/Spinner.jsx",
+      "_components/ui/SpinnerMini.jsx",
+      "_components/ui/Text.jsx"
+    ],
+    "_features/auth/actions/auth-actions.js": [],
+    "_features/auth/components/AuthHeader.jsx": [],
+    "_features/auth/components/AuthProviders.jsx": [
+      "_features/auth/components/index.js"
+    ],
+    "_features/auth/components/LoginMessage.jsx": [],
+    "_features/auth/components/Protected.jsx": [
+      "_features/auth/components/index.js"
+    ],
+    "_features/auth/components/SignInButton.jsx": [
+      "_features/auth/actions/auth-actions.js"
+    ],
+    "_features/auth/components/SignOutButton.jsx": [
+      "_features/auth/actions/auth-actions.js"
+    ],
+    "_features/auth/components/index.js": [
+      "_features/auth/components/AuthHeader.jsx",
+      "_features/auth/components/AuthProviders.jsx",
+      "_features/auth/components/LoginMessage.jsx",
+      "_features/auth/components/Protected.jsx",
+      "_features/auth/components/SignInButton.jsx",
+      "_features/auth/components/SignOutButton.jsx"
+    ],
+    "_features/auth/index.js": [
+      "_features/auth/components/index.js"
+    ],
+    "_features/reservation/components/DateSelector.jsx": [
+      "_features/reservation/components/DateSelector.styles.js",
+      "_features/reservation/components/ui/index.js",
+      "_features/reservation/context/index.js",
+      "_features/reservation/utils/index.js"
+    ],
+    "_features/reservation/components/DateSelector.styles.js": [],
+    "_features/reservation/components/GuestSelector.jsx": [],
+    "_features/reservation/components/Reservation.jsx": [
+      "_features/auth/index.js",
+      "_features/reservation/components/index.js"
+    ],
+    "_features/reservation/components/ReservationButtonDelete.jsx": [],
+    "_features/reservation/components/ReservationButtonEdit.jsx": [],
+    "_features/reservation/components/ReservationCard.jsx": [
+      "_features/reservation/components/ReservationButtonDelete.jsx",
+      "_features/reservation/components/ReservationButtonEdit.jsx",
+      "_features/reservation/components/ReservationDate.jsx",
+      "_features/reservation/components/ReservationDetails.jsx",
+      "_features/reservation/components/ReservationStatus.jsx"
+    ],
+    "_features/reservation/components/ReservationDate.jsx": [],
+    "_features/reservation/components/ReservationDetails.jsx": [],
+    "_features/reservation/components/ReservationForm.jsx": [
+      "_features/reservation/components/index.js"
+    ],
+    "_features/reservation/components/ReservationRemainder.jsx": [
+      "_features/reservation/context/index.js"
+    ],
+    "_features/reservation/components/ReservationStatus.jsx": [],
+    "_features/reservation/components/ReservationsList.jsx": [
+      "_features/reservation/components/index.js"
+    ],
+    "_features/reservation/components/index.js": [
+      "_features/reservation/components/DateSelector.jsx",
+      "_features/reservation/components/GuestSelector.jsx",
+      "_features/reservation/components/Reservation.jsx",
+      "_features/reservation/components/ReservationButtonDelete.jsx",
+      "_features/reservation/components/ReservationButtonEdit.jsx",
+      "_features/reservation/components/ReservationCard.jsx",
+      "_features/reservation/components/ReservationDate.jsx",
+      "_features/reservation/components/ReservationDetails.jsx",
+      "_features/reservation/components/ReservationForm.jsx",
+      "_features/reservation/components/ReservationRemainder.jsx",
+      "_features/reservation/components/ReservationStatus.jsx",
+      "_features/reservation/components/ReservationsList.jsx",
+      "_features/reservation/components/ui/index.js"
+    ],
+    "_features/reservation/components/ui/BookingSummary.jsx": [],
+    "_features/reservation/components/ui/ClearButton.jsx": [],
+    "_features/reservation/components/ui/PriceDisplay.jsx": [],
+    "_features/reservation/components/ui/index.js": [
+      "_features/reservation/components/ui/BookingSummary.jsx",
+      "_features/reservation/components/ui/ClearButton.jsx",
+      "_features/reservation/components/ui/PriceDisplay.jsx"
+    ],
+    "_features/reservation/context/ReservationProvider.jsx": [],
+    "_features/reservation/context/index.js": [
+      "_features/reservation/context/ReservationProvider.jsx",
+      "_features/reservation/context/useReservation.js"
+    ],
+    "_features/reservation/context/useReservation.js": [
+      "_features/reservation/context/index.js"
+    ],
+    "_features/reservation/index.js": [
+      "_features/reservation/components/index.js",
+      "_features/reservation/context/index.js",
+      "_features/reservation/utils/index.js"
+    ],
+    "_features/reservation/utils/dateHelpers.js": [],
+    "_features/reservation/utils/index.js": [
+      "_features/reservation/utils/dateHelpers.js",
+      "_features/reservation/utils/pricing.js"
+    ],
+    "_features/reservation/utils/pricing.js": [],
+    "about/CabinsCounter.jsx": [
+      "_api/data-service.js"
+    ],
+    "about/page.js": [
+      "about/CabinsCounter.jsx"
+    ],
+    "account/SideMenu.jsx": [
+      "_components/ui/index.js"
+    ],
+    "account/layout.js": [
+      "_features/auth/components/index.js",
+      "account/SideMenu.jsx"
+    ],
+    "account/page.js": [
+      "_api/auth.js",
+      "_components/ui/index.js"
+    ],
+    "account/profile/_components/SelectCountry.jsx": [],
+    "account/profile/_components/UpdateProfileForm.jsx": [
+      "account/profile/actions/index.js"
+    ],
+    "account/profile/_components/index.js": [
+      "account/profile/_components/SelectCountry.jsx",
+      "account/profile/_components/UpdateProfileForm.jsx"
+    ],
+    "account/profile/actions/deleteReservations.js": [],
+    "account/profile/actions/index.js": [
+      "account/profile/actions/deleteReservations.js",
+      "account/profile/actions/updateProfile.js"
+    ],
+    "account/profile/actions/updateProfile.js": [],
+    "account/profile/page.js": [
+      "_components/ui/index.js",
+      "account/profile/_components/index.js"
+    ],
+    "account/reservations/page.js": [],
+    "cabins/[cabinId]/not-found.js": [
+      "_components/index.js",
+      "_components/ui/index.js"
+    ],
+    "cabins/[cabinId]/page.js": [],
+    "cabins/_components/Cabin.jsx": [],
+    "cabins/_components/CabinCard.jsx": [
+      "_components/ui/index.js"
+    ],
+    "cabins/_components/CabinFilter.jsx": [
+      "_components/ui/index.js",
+      "cabins/_components/index.js"
+    ],
+    "cabins/_components/CabinList.jsx": [
+      "_api/data-service.js",
+      "cabins/_components/index.js"
+    ],
+    "cabins/_components/FilterButton.jsx": [],
+    "cabins/_components/index.js": [
+      "cabins/_components/Cabin.jsx",
+      "cabins/_components/CabinCard.jsx",
+      "cabins/_components/CabinFilter.jsx",
+      "cabins/_components/CabinList.jsx",
+      "cabins/_components/FilterButton.jsx"
+    ],
+    "cabins/loading.js": [
+      "_components/ui/index.js"
+    ],
+    "cabins/page.js": [
+      "_components/ui/index.js",
+      "_features/reservation/components/index.js",
+      "cabins/_components/index.js"
+    ],
+    "error.js": [
+      "_components/ui/index.js"
+    ],
+    "layout.js": [
+      "_components/index.js",
+      "_features/reservation/index.js"
+    ],
+    "loading.js": [
+      "_components/ui/index.js"
+    ],
+    "login/page.js": [
+      "_components/ui/index.js",
+      "_features/auth/components/index.js"
+    ],
+    "not-found.js": [
+      "_components/index.js",
+      "_components/ui/index.js"
+    ],
+    "page.js": []
+  },
+  "circularDependencies": [
+    {
+      "cycle": [
+        "_components/Header/Header.jsx",
+        "_components/Header/index.js"
+      ],
+      "length": 2,
+      "modules": [
+        "_components/Header/Header.jsx",
+        "_components/Header/index.js"
+      ]
+    },
+    {
+      "cycle": [
+        "_features/auth/components/index.js",
+        "_features/auth/components/AuthProviders.jsx"
+      ],
+      "length": 2,
+      "modules": [
+        "_features/auth/components/index.js",
+        "_features/auth/components/AuthProviders.jsx"
+      ]
+    },
+    {
+      "cycle": [
+        "_features/auth/components/index.js",
+        "_features/auth/components/Protected.jsx"
+      ],
+      "length": 2,
+      "modules": [
+        "_features/auth/components/index.js",
+        "_features/auth/components/Protected.jsx"
+      ]
+    },
+    {
+      "cycle": [
+        "_features/reservation/context/index.js",
+        "_features/reservation/context/useReservation.js"
+      ],
+      "length": 2,
+      "modules": [
+        "_features/reservation/context/index.js",
+        "_features/reservation/context/useReservation.js"
+      ]
+    },
+    {
+      "cycle": [
+        "_features/reservation/components/Reservation.jsx",
+        "_features/reservation/components/index.js"
+      ],
+      "length": 2,
+      "modules": [
+        "_features/reservation/components/Reservation.jsx",
+        "_features/reservation/components/index.js"
+      ]
+    },
+    {
+      "cycle": [
+        "_features/reservation/components/index.js",
+        "_features/reservation/components/ReservationForm.jsx"
+      ],
+      "length": 2,
+      "modules": [
+        "_features/reservation/components/index.js",
+        "_features/reservation/components/ReservationForm.jsx"
+      ]
+    },
+    {
+      "cycle": [
+        "_features/reservation/components/index.js",
+        "_features/reservation/components/ReservationsList.jsx"
+      ],
+      "length": 2,
+      "modules": [
+        "_features/reservation/components/index.js",
+        "_features/reservation/components/ReservationsList.jsx"
+      ]
+    },
+    {
+      "cycle": [
+        "cabins/_components/CabinFilter.jsx",
+        "cabins/_components/index.js"
+      ],
+      "length": 2,
+      "modules": [
+        "cabins/_components/CabinFilter.jsx",
+        "cabins/_components/index.js"
+      ]
+    },
+    {
+      "cycle": [
+        "cabins/_components/index.js",
+        "cabins/_components/CabinList.jsx"
+      ],
+      "length": 2,
+      "modules": [
+        "cabins/_components/index.js",
+        "cabins/_components/CabinList.jsx"
+      ]
+    }
+  ],
+  "topModulesByDependencies": [
+    {
+      "module": "_features/reservation/components/index.js",
+      "count": 13,
+      "dependencies": [
+        "_features/reservation/components/DateSelector.jsx",
+        "_features/reservation/components/GuestSelector.jsx",
+        "_features/reservation/components/Reservation.jsx",
+        "_features/reservation/components/ReservationButtonDelete.jsx",
+        "_features/reservation/components/ReservationButtonEdit.jsx",
+        "_features/reservation/components/ReservationCard.jsx",
+        "_features/reservation/components/ReservationDate.jsx",
+        "_features/reservation/components/ReservationDetails.jsx",
+        "_features/reservation/components/ReservationForm.jsx",
+        "_features/reservation/components/ReservationRemainder.jsx",
+        "_features/reservation/components/ReservationStatus.jsx",
+        "_features/reservation/components/ReservationsList.jsx",
+        "_features/reservation/components/ui/index.js"
+      ]
+    },
+    {
+      "module": "_components/ui/index.js",
+      "count": 9,
+      "dependencies": [
+        "_components/ui/Button.jsx",
+        "_components/ui/Container.jsx",
+        "_components/ui/Heading.jsx",
+        "_components/ui/Icon.jsx",
+        "_components/ui/Input.jsx",
+        "_components/ui/Layout.jsx",
+        "_components/ui/Spinner.jsx",
+        "_components/ui/SpinnerMini.jsx",
+        "_components/ui/Text.jsx"
+      ]
+    },
+    {
+      "module": "_features/auth/components/index.js",
+      "count": 6,
+      "dependencies": [
+        "_features/auth/components/AuthHeader.jsx",
+        "_features/auth/components/AuthProviders.jsx",
+        "_features/auth/components/LoginMessage.jsx",
+        "_features/auth/components/Protected.jsx",
+        "_features/auth/components/SignInButton.jsx",
+        "_features/auth/components/SignOutButton.jsx"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ReservationCard.jsx",
+      "count": 5,
+      "dependencies": [
+        "_features/reservation/components/ReservationButtonDelete.jsx",
+        "_features/reservation/components/ReservationButtonEdit.jsx",
+        "_features/reservation/components/ReservationDate.jsx",
+        "_features/reservation/components/ReservationDetails.jsx",
+        "_features/reservation/components/ReservationStatus.jsx"
+      ]
+    },
+    {
+      "module": "cabins/_components/index.js",
+      "count": 5,
+      "dependencies": [
+        "cabins/_components/Cabin.jsx",
+        "cabins/_components/CabinCard.jsx",
+        "cabins/_components/CabinFilter.jsx",
+        "cabins/_components/CabinList.jsx",
+        "cabins/_components/FilterButton.jsx"
+      ]
+    },
+    {
+      "module": "_components/index.js",
+      "count": 4,
+      "dependencies": [
+        "_components/BackButton.jsx",
+        "_components/ErrorLayout.jsx",
+        "_components/Header/index.js",
+        "_components/TextExpander.jsx"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/DateSelector.jsx",
+      "count": 4,
+      "dependencies": [
+        "_features/reservation/components/DateSelector.styles.js",
+        "_features/reservation/components/ui/index.js",
+        "_features/reservation/context/index.js",
+        "_features/reservation/utils/index.js"
+      ]
+    },
+    {
+      "module": "_components/Header/index.js",
+      "count": 3,
+      "dependencies": [
+        "_components/Header/Header.jsx",
+        "_components/Header/Logo.jsx",
+        "_components/Header/Navigation.jsx"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ui/index.js",
+      "count": 3,
+      "dependencies": [
+        "_features/reservation/components/ui/BookingSummary.jsx",
+        "_features/reservation/components/ui/ClearButton.jsx",
+        "_features/reservation/components/ui/PriceDisplay.jsx"
+      ]
+    },
+    {
+      "module": "_features/reservation/index.js",
+      "count": 3,
+      "dependencies": [
+        "_features/reservation/components/index.js",
+        "_features/reservation/context/index.js",
+        "_features/reservation/utils/index.js"
+      ]
+    },
+    {
+      "module": "cabins/page.js",
+      "count": 3,
+      "dependencies": [
+        "_components/ui/index.js",
+        "_features/reservation/components/index.js",
+        "cabins/_components/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/Reservation.jsx",
+      "count": 2,
+      "dependencies": [
+        "_features/auth/index.js",
+        "_features/reservation/components/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/context/index.js",
+      "count": 2,
+      "dependencies": [
+        "_features/reservation/context/ReservationProvider.jsx",
+        "_features/reservation/context/useReservation.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/utils/index.js",
+      "count": 2,
+      "dependencies": [
+        "_features/reservation/utils/dateHelpers.js",
+        "_features/reservation/utils/pricing.js"
+      ]
+    },
+    {
+      "module": "account/layout.js",
+      "count": 2,
+      "dependencies": [
+        "_features/auth/components/index.js",
+        "account/SideMenu.jsx"
+      ]
+    }
+  ],
+  "topModulesByDependents": [
+    {
+      "module": "_components/ui/index.js",
+      "count": 13,
+      "dependents": [
+        "_components/BackButton.jsx",
+        "account/SideMenu.jsx",
+        "account/page.js",
+        "account/profile/page.js",
+        "cabins/[cabinId]/not-found.js",
+        "cabins/_components/CabinCard.jsx",
+        "cabins/_components/CabinFilter.jsx",
+        "cabins/loading.js",
+        "cabins/page.js",
+        "error.js",
+        "loading.js",
+        "login/page.js",
+        "not-found.js"
+      ]
+    },
+    {
+      "module": "_features/auth/components/index.js",
+      "count": 6,
+      "dependents": [
+        "_components/Header/Navigation.jsx",
+        "_features/auth/components/AuthProviders.jsx",
+        "_features/auth/components/Protected.jsx",
+        "_features/auth/index.js",
+        "account/layout.js",
+        "login/page.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/index.js",
+      "count": 5,
+      "dependents": [
+        "_features/reservation/components/Reservation.jsx",
+        "_features/reservation/components/ReservationForm.jsx",
+        "_features/reservation/components/ReservationsList.jsx",
+        "_features/reservation/index.js",
+        "cabins/page.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/context/index.js",
+      "count": 4,
+      "dependents": [
+        "_features/reservation/components/DateSelector.jsx",
+        "_features/reservation/components/ReservationRemainder.jsx",
+        "_features/reservation/context/useReservation.js",
+        "_features/reservation/index.js"
+      ]
+    },
+    {
+      "module": "_api/data-service.js",
+      "count": 3,
+      "dependents": [
+        "_api/auth.js",
+        "about/CabinsCounter.jsx",
+        "cabins/_components/CabinList.jsx"
+      ]
+    },
+    {
+      "module": "_components/index.js",
+      "count": 3,
+      "dependents": [
+        "cabins/[cabinId]/not-found.js",
+        "layout.js",
+        "not-found.js"
+      ]
+    },
+    {
+      "module": "cabins/_components/index.js",
+      "count": 3,
+      "dependents": [
+        "cabins/_components/CabinFilter.jsx",
+        "cabins/_components/CabinList.jsx",
+        "cabins/page.js"
+      ]
+    },
+    {
+      "module": "_components/Header/index.js",
+      "count": 2,
+      "dependents": [
+        "_components/Header/Header.jsx",
+        "_components/index.js"
+      ]
+    },
+    {
+      "module": "_features/auth/actions/auth-actions.js",
+      "count": 2,
+      "dependents": [
+        "_features/auth/components/SignInButton.jsx",
+        "_features/auth/components/SignOutButton.jsx"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ui/index.js",
+      "count": 2,
+      "dependents": [
+        "_features/reservation/components/DateSelector.jsx",
+        "_features/reservation/components/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/utils/index.js",
+      "count": 2,
+      "dependents": [
+        "_features/reservation/components/DateSelector.jsx",
+        "_features/reservation/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ReservationButtonDelete.jsx",
+      "count": 2,
+      "dependents": [
+        "_features/reservation/components/ReservationCard.jsx",
+        "_features/reservation/components/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ReservationButtonEdit.jsx",
+      "count": 2,
+      "dependents": [
+        "_features/reservation/components/ReservationCard.jsx",
+        "_features/reservation/components/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ReservationDate.jsx",
+      "count": 2,
+      "dependents": [
+        "_features/reservation/components/ReservationCard.jsx",
+        "_features/reservation/components/index.js"
+      ]
+    },
+    {
+      "module": "_features/reservation/components/ReservationDetails.jsx",
+      "count": 2,
+      "dependents": [
+        "_features/reservation/components/ReservationCard.jsx",
+        "_features/reservation/components/index.js"
+      ]
+    }
+  ],
+  "analysis": {
+    "criticalModules": [
+      {
+        "module": "_features/reservation/components/index.js",
+        "count": 13,
+        "dependencies": [
+          "_features/reservation/components/DateSelector.jsx",
+          "_features/reservation/components/GuestSelector.jsx",
+          "_features/reservation/components/Reservation.jsx",
+          "_features/reservation/components/ReservationButtonDelete.jsx",
+          "_features/reservation/components/ReservationButtonEdit.jsx",
+          "_features/reservation/components/ReservationCard.jsx",
+          "_features/reservation/components/ReservationDate.jsx",
+          "_features/reservation/components/ReservationDetails.jsx",
+          "_features/reservation/components/ReservationForm.jsx",
+          "_features/reservation/components/ReservationRemainder.jsx",
+          "_features/reservation/components/ReservationStatus.jsx",
+          "_features/reservation/components/ReservationsList.jsx",
+          "_features/reservation/components/ui/index.js"
+        ]
+      },
+      {
+        "module": "_components/ui/index.js",
+        "count": 9,
+        "dependencies": [
+          "_components/ui/Button.jsx",
+          "_components/ui/Container.jsx",
+          "_components/ui/Heading.jsx",
+          "_components/ui/Icon.jsx",
+          "_components/ui/Input.jsx",
+          "_components/ui/Layout.jsx",
+          "_components/ui/Spinner.jsx",
+          "_components/ui/SpinnerMini.jsx",
+          "_components/ui/Text.jsx"
+        ]
+      },
+      {
+        "module": "_features/auth/components/index.js",
+        "count": 6,
+        "dependencies": [
+          "_features/auth/components/AuthHeader.jsx",
+          "_features/auth/components/AuthProviders.jsx",
+          "_features/auth/components/LoginMessage.jsx",
+          "_features/auth/components/Protected.jsx",
+          "_features/auth/components/SignInButton.jsx",
+          "_features/auth/components/SignOutButton.jsx"
+        ]
+      },
+      {
+        "module": "_features/reservation/components/ReservationCard.jsx",
+        "count": 5,
+        "dependencies": [
+          "_features/reservation/components/ReservationButtonDelete.jsx",
+          "_features/reservation/components/ReservationButtonEdit.jsx",
+          "_features/reservation/components/ReservationDate.jsx",
+          "_features/reservation/components/ReservationDetails.jsx",
+          "_features/reservation/components/ReservationStatus.jsx"
+        ]
+      },
+      {
+        "module": "cabins/_components/index.js",
+        "count": 5,
+        "dependencies": [
+          "cabins/_components/Cabin.jsx",
+          "cabins/_components/CabinCard.jsx",
+          "cabins/_components/CabinFilter.jsx",
+          "cabins/_components/CabinList.jsx",
+          "cabins/_components/FilterButton.jsx"
+        ]
+      },
+      {
+        "module": "_components/index.js",
+        "count": 4,
+        "dependencies": [
+          "_components/BackButton.jsx",
+          "_components/ErrorLayout.jsx",
+          "_components/Header/index.js",
+          "_components/TextExpander.jsx"
+        ]
+      },
+      {
+        "module": "_features/reservation/components/DateSelector.jsx",
+        "count": 4,
+        "dependencies": [
+          "_features/reservation/components/DateSelector.styles.js",
+          "_features/reservation/components/ui/index.js",
+          "_features/reservation/context/index.js",
+          "_features/reservation/utils/index.js"
+        ]
+      },
+      {
+        "module": "_components/Header/index.js",
+        "count": 3,
+        "dependencies": [
+          "_components/Header/Header.jsx",
+          "_components/Header/Logo.jsx",
+          "_components/Header/Navigation.jsx"
+        ]
+      },
+      {
+        "module": "_features/reservation/components/ui/index.js",
+        "count": 3,
+        "dependencies": [
+          "_features/reservation/components/ui/BookingSummary.jsx",
+          "_features/reservation/components/ui/ClearButton.jsx",
+          "_features/reservation/components/ui/PriceDisplay.jsx"
+        ]
+      },
+      {
+        "module": "_features/reservation/index.js",
+        "count": 3,
+        "dependencies": [
+          "_features/reservation/components/index.js",
+          "_features/reservation/context/index.js",
+          "_features/reservation/utils/index.js"
+        ]
+      },
+      {
+        "module": "cabins/page.js",
+        "count": 3,
+        "dependencies": [
+          "_components/ui/index.js",
+          "_features/reservation/components/index.js",
+          "cabins/_components/index.js"
+        ]
+      }
+    ],
+    "isolatedModules": [],
+    "highlyDependentModules": [
+      {
+        "module": "_components/ui/index.js",
+        "count": 13,
+        "dependents": [
+          "_components/BackButton.jsx",
+          "account/SideMenu.jsx",
+          "account/page.js",
+          "account/profile/page.js",
+          "cabins/[cabinId]/not-found.js",
+          "cabins/_components/CabinCard.jsx",
+          "cabins/_components/CabinFilter.jsx",
+          "cabins/loading.js",
+          "cabins/page.js",
+          "error.js",
+          "loading.js",
+          "login/page.js",
+          "not-found.js"
+        ]
+      },
+      {
+        "module": "_features/auth/components/index.js",
+        "count": 6,
+        "dependents": [
+          "_components/Header/Navigation.jsx",
+          "_features/auth/components/AuthProviders.jsx",
+          "_features/auth/components/Protected.jsx",
+          "_features/auth/index.js",
+          "account/layout.js",
+          "login/page.js"
+        ]
+      },
+      {
+        "module": "_features/reservation/components/index.js",
+        "count": 5,
+        "dependents": [
+          "_features/reservation/components/Reservation.jsx",
+          "_features/reservation/components/ReservationForm.jsx",
+          "_features/reservation/components/ReservationsList.jsx",
+          "_features/reservation/index.js",
+          "cabins/page.js"
+        ]
+      },
+      {
+        "module": "_features/reservation/context/index.js",
+        "count": 4,
+        "dependents": [
+          "_features/reservation/components/DateSelector.jsx",
+          "_features/reservation/components/ReservationRemainder.jsx",
+          "_features/reservation/context/useReservation.js",
+          "_features/reservation/index.js"
+        ]
+      },
+      {
+        "module": "_api/data-service.js",
+        "count": 3,
+        "dependents": [
+          "_api/auth.js",
+          "about/CabinsCounter.jsx",
+          "cabins/_components/CabinList.jsx"
+        ]
+      },
+      {
+        "module": "_components/index.js",
+        "count": 3,
+        "dependents": [
+          "cabins/[cabinId]/not-found.js",
+          "layout.js",
+          "not-found.js"
+        ]
+      },
+      {
+        "module": "cabins/_components/index.js",
+        "count": 3,
+        "dependents": [
+          "cabins/_components/CabinFilter.jsx",
+          "cabins/_components/CabinList.jsx",
+          "cabins/page.js"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1685 @@
+{
+  "summary": {
+    "totalFiles": 85,
+    "totalDependencies": 146,
+    "totalExternal": 93,
+    "totalInternal": 53,
+    "averageDependencies": 1.7176470588235293
+  },
+  "filesByDependencies": [
+    [
+      "app/_features/reservation/components/ReservationCard.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@/app/_components/ui",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "date-fns",
+            "line": 2
+          },
+          {
+            "type": "external",
+            "path": "next/image",
+            "line": 3
+          },
+          {
+            "type": "internal",
+            "path": "./ReservationDate",
+            "line": 4
+          },
+          {
+            "type": "internal",
+            "path": "./ReservationDetails",
+            "line": 5
+          },
+          {
+            "type": "internal",
+            "path": "./ReservationStatus",
+            "line": 6
+          },
+          {
+            "type": "internal",
+            "path": "./ReservationButtonEdit",
+            "line": 7
+          },
+          {
+            "type": "internal",
+            "path": "./ReservationButtonDelete",
+            "line": 8
+          }
+        ],
+        "externalCount": 3,
+        "internalCount": 5,
+        "totalCount": 8
+      }
+    ],
+    [
+      "app/_features/reservation/components/DateSelector.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "internal",
+            "path": "../context",
+            "line": 2
+          },
+          {
+            "type": "external",
+            "path": "date-fns",
+            "line": 3
+          },
+          {
+            "type": "external",
+            "path": "react-day-picker",
+            "line": 4
+          },
+          {
+            "type": "external",
+            "path": "react-day-picker/style.css",
+            "line": 5
+          },
+          {
+            "type": "internal",
+            "path": "./DateSelector.styles",
+            "line": 7
+          },
+          {
+            "type": "internal",
+            "path": "./ui",
+            "line": 11
+          },
+          {
+            "type": "internal",
+            "path": "../utils",
+            "line": 12
+          }
+        ],
+        "externalCount": 3,
+        "internalCount": 4,
+        "totalCount": 7
+      }
+    ],
+    [
+      "app/_features/reservation/components/ReservationRemainder.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@heroicons/react/24/solid",
+            "line": 3
+          },
+          {
+            "type": "internal",
+            "path": "../context",
+            "line": 4
+          },
+          {
+            "type": "external",
+            "path": "date-fns",
+            "line": 5
+          },
+          {
+            "type": "external",
+            "path": "@/app/_components/ui",
+            "line": 6
+          },
+          {
+            "type": "external",
+            "path": "next/link",
+            "line": 7
+          }
+        ],
+        "externalCount": 4,
+        "internalCount": 1,
+        "totalCount": 5
+      }
+    ],
+    [
+      "app/cabins/[cabinId]/page.js",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@/app/_api/data-service",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "@/app/_components/ui",
+            "line": 3
+          },
+          {
+            "type": "external",
+            "path": "react",
+            "line": 4
+          },
+          {
+            "type": "external",
+            "path": "@/app/cabins/_components",
+            "line": 5
+          },
+          {
+            "type": "external",
+            "path": "@/app/_features/reservation",
+            "line": 6
+          }
+        ],
+        "externalCount": 5,
+        "internalCount": 0,
+        "totalCount": 5
+      }
+    ],
+    [
+      "app/_api/auth.js",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "next-auth",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "next-auth/providers/google",
+            "line": 2
+          },
+          {
+            "type": "external",
+            "path": "next-auth/providers/yandex",
+            "line": 3
+          },
+          {
+            "type": "internal",
+            "path": "./data-service",
+            "line": 4
+          }
+        ],
+        "externalCount": 3,
+        "internalCount": 1,
+        "totalCount": 4
+      }
+    ],
+    [
+      "app/_features/reservation/components/Reservation.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@/app/_components/ui",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "@/app/_api/data-service",
+            "line": 2
+          },
+          {
+            "type": "internal",
+            "path": "./",
+            "line": 3
+          },
+          {
+            "type": "internal",
+            "path": "../../auth",
+            "line": 4
+          }
+        ],
+        "externalCount": 2,
+        "internalCount": 2,
+        "totalCount": 4
+      }
+    ],
+    [
+      "app/_features/reservation/components/ReservationsList.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@/app/_api/auth",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "@/app/_api/data-service",
+            "line": 2
+          },
+          {
+            "type": "external",
+            "path": "@/app/_components/ui",
+            "line": 3
+          },
+          {
+            "type": "internal",
+            "path": "./",
+            "line": 4
+          }
+        ],
+        "externalCount": 3,
+        "internalCount": 1,
+        "totalCount": 4
+      }
+    ],
+    [
+      "app/about/page.js",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "next/image",
+            "line": 1
+          },
+          {
+            "type": "external",
+            "path": "@/public/about-1.jpg",
+            "line": 2
+          },
+          {
+            "type": "internal",
+            "path": "./CabinsCounter",
+            "line": 3
+          },
+          {
+            "type": "external",
+            "path": "react",
+            "line": 4
+          }
+        ],
+        "externalCount": 3,
+        "internalCount": 1,
+        "totalCount": 4
+      }
+    ],
+    [
+      "app/account/SideMenu.jsx",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@heroicons/react/24/solid",
+            "line": 2
+          },
+          {
+            "type": "external",
+            "path": "next/link",
+            "line": 7
+          },
+          {
+            "type": "external",
+            "path": "next/navigation",
+            "line": 8
+          },
+          {
+            "type": "internal",
+            "path": "../_components/ui",
+            "line": 9
+          }
+        ],
+        "externalCount": 3,
+        "internalCount": 1,
+        "totalCount": 4
+      }
+    ],
+    [
+      "app/account/profile/page.js",
+      {
+        "dependencies": [
+          {
+            "type": "external",
+            "path": "@/app/_api/auth",
+            "line": 1
+          },
+          {
+            "type": "internal",
+            "path": "../../_components/ui",
+            "line": 2
+          },
+          {
+            "type": "internal",
+            "path": "./_components",
+            "line": 3
+          },
+          {
+            "type": "external",
+            "path": "@/app/_api/data-service",
+            "line": 4
+          }
+        ],
+        "externalCount": 2,
+        "internalCount": 2,
+        "totalCount": 4
+      }
+    ]
+  ],
+  "filesWithNoDeps": [
+    "app/_components/ErrorLayout.jsx",
+    "app/_components/Header/index.js",
+    "app/_components/index.js",
+    "app/_components/ui/Button.jsx",
+    "app/_components/ui/Container.jsx",
+    "app/_components/ui/Heading.jsx",
+    "app/_components/ui/Icon.jsx",
+    "app/_components/ui/Input.jsx",
+    "app/_components/ui/Layout.jsx",
+    "app/_components/ui/Spinner.jsx",
+    "app/_components/ui/SpinnerMini.jsx",
+    "app/_components/ui/Text.jsx",
+    "app/_components/ui/index.js",
+    "app/_features/auth/components/index.js",
+    "app/_features/auth/index.js",
+    "app/_features/reservation/components/DateSelector.styles.js",
+    "app/_features/reservation/components/GuestSelector.jsx",
+    "app/_features/reservation/components/ReservationStatus.jsx",
+    "app/_features/reservation/components/index.js",
+    "app/_features/reservation/components/ui/BookingSummary.jsx",
+    "app/_features/reservation/components/ui/ClearButton.jsx",
+    "app/_features/reservation/components/ui/PriceDisplay.jsx",
+    "app/_features/reservation/components/ui/index.js",
+    "app/_features/reservation/context/index.js",
+    "app/_features/reservation/index.js",
+    "app/_features/reservation/utils/index.js",
+    "app/_features/reservation/utils/pricing.js",
+    "app/account/profile/_components/index.js",
+    "app/account/profile/actions/index.js",
+    "app/cabins/_components/index.js"
+  ],
+  "detailedAnalysis": {
+    "app/_api/auth.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next-auth",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next-auth/providers/google",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next-auth/providers/yandex",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "./data-service",
+          "line": 4
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 1,
+      "totalCount": 4
+    },
+    "app/_api/data-service.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/navigation",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "./supabase",
+          "line": 3
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 1,
+      "totalCount": 3
+    },
+    "app/_api/supabase.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@supabase/supabase-js",
+          "line": 1
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/_components/BackButton.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next/navigation",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "./ui",
+          "line": 4
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 1,
+      "totalCount": 2
+    },
+    "app/_components/ErrorLayout.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/Header/Header.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 1
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 1,
+      "totalCount": 1
+    },
+    "app/_components/Header/Logo.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 2
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 0,
+      "totalCount": 2
+    },
+    "app/_components/Header/Navigation.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "react",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "../../_features/auth/components",
+          "line": 3
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 1,
+      "totalCount": 3
+    },
+    "app/_components/Header/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/TextExpander.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "react",
+          "line": 3
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/_components/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Button.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Container.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Heading.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Icon.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Input.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Layout.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Spinner.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/SpinnerMini.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/Text.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_components/ui/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/auth/actions/auth-actions.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 3
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/_features/auth/components/AuthHeader.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "transliteration",
+          "line": 3
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 0,
+      "totalCount": 3
+    },
+    "app/_features/auth/components/AuthProviders.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 1
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 1,
+      "totalCount": 1
+    },
+    "app/_features/auth/components/LoginMessage.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_components/ui/",
+          "line": 2
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 0,
+      "totalCount": 2
+    },
+    "app/_features/auth/components/Protected.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": ".",
+          "line": 2
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 1,
+      "totalCount": 2
+    },
+    "app/_features/auth/components/SignInButton.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../actions/auth-actions",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 2
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 1,
+      "totalCount": 2
+    },
+    "app/_features/auth/components/SignOutButton.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/outline",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "../actions/auth-actions",
+          "line": 3
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 1,
+      "totalCount": 3
+    },
+    "app/_features/auth/components/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/auth/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/DateSelector.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../context",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "react-day-picker",
+          "line": 4
+        },
+        {
+          "type": "external",
+          "path": "react-day-picker/style.css",
+          "line": 5
+        },
+        {
+          "type": "internal",
+          "path": "./DateSelector.styles",
+          "line": 7
+        },
+        {
+          "type": "internal",
+          "path": "./ui",
+          "line": 11
+        },
+        {
+          "type": "internal",
+          "path": "../utils",
+          "line": 12
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 4,
+      "totalCount": 7
+    },
+    "app/_features/reservation/components/DateSelector.styles.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/GuestSelector.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/Reservation.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "../../auth",
+          "line": 4
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 2,
+      "totalCount": 4
+    },
+    "app/_features/reservation/components/ReservationButtonDelete.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/solid",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "@/app/account/profile/actions",
+          "line": 4
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 0,
+      "totalCount": 2
+    },
+    "app/_features/reservation/components/ReservationButtonEdit.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/outline",
+          "line": 2
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 0,
+      "totalCount": 2
+    },
+    "app/_features/reservation/components/ReservationCard.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "./ReservationDate",
+          "line": 4
+        },
+        {
+          "type": "internal",
+          "path": "./ReservationDetails",
+          "line": 5
+        },
+        {
+          "type": "internal",
+          "path": "./ReservationStatus",
+          "line": 6
+        },
+        {
+          "type": "internal",
+          "path": "./ReservationButtonEdit",
+          "line": 7
+        },
+        {
+          "type": "internal",
+          "path": "./ReservationButtonDelete",
+          "line": 8
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 5,
+      "totalCount": 8
+    },
+    "app/_features/reservation/components/ReservationDate.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 1
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/_features/reservation/components/ReservationDetails.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 1
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/_features/reservation/components/ReservationForm.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_features/auth",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 3
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 1,
+      "totalCount": 3
+    },
+    "app/_features/reservation/components/ReservationRemainder.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/solid",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "../context",
+          "line": 4
+        },
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 5
+        },
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 6
+        },
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 7
+        }
+      ],
+      "externalCount": 4,
+      "internalCount": 1,
+      "totalCount": 5
+    },
+    "app/_features/reservation/components/ReservationStatus.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/ReservationsList.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 4
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 1,
+      "totalCount": 4
+    },
+    "app/_features/reservation/components/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/ui/BookingSummary.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/ui/ClearButton.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/ui/PriceDisplay.jsx": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/components/ui/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/context/ReservationProvider.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "react",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "react",
+          "line": 3
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 0,
+      "totalCount": 2
+    },
+    "app/_features/reservation/context/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/context/useReservation.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "react",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 2
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 1,
+      "totalCount": 2
+    },
+    "app/_features/reservation/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/utils/dateHelpers.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "date-fns",
+          "line": 1
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/_features/reservation/utils/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/_features/reservation/utils/pricing.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/about/CabinsCounter.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../_api/data-service",
+          "line": 1
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 1,
+      "totalCount": 1
+    },
+    "app/about/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/public/about-1.jpg",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "./CabinsCounter",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "react",
+          "line": 4
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 1,
+      "totalCount": 4
+    },
+    "app/account/SideMenu.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/solid",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 7
+        },
+        {
+          "type": "external",
+          "path": "next/navigation",
+          "line": 8
+        },
+        {
+          "type": "internal",
+          "path": "../_components/ui",
+          "line": 9
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 1,
+      "totalCount": 4
+    },
+    "app/account/layout.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../_features/auth/components",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "./SideMenu",
+          "line": 2
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 2,
+      "totalCount": 2
+    },
+    "app/account/page.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../_api/auth",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "../_components/ui",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "transliteration",
+          "line": 3
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 2,
+      "totalCount": 3
+    },
+    "app/account/profile/_components/SelectCountry.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 2
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 0,
+      "totalCount": 2
+    },
+    "app/account/profile/_components/UpdateProfileForm.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "../actions",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "react-dom",
+          "line": 4
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 1,
+      "totalCount": 3
+    },
+    "app/account/profile/_components/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/account/profile/actions/deleteReservations.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 4
+        },
+        {
+          "type": "external",
+          "path": "next/cache",
+          "line": 5
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 0,
+      "totalCount": 3
+    },
+    "app/account/profile/actions/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/account/profile/actions/updateProfile.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 4
+        },
+        {
+          "type": "external",
+          "path": "next/cache",
+          "line": 5
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 0,
+      "totalCount": 3
+    },
+    "app/account/profile/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "../../_components/ui",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "./_components",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 4
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 2,
+      "totalCount": 4
+    },
+    "app/account/reservations/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_features/reservation/components",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "react",
+          "line": 3
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 0,
+      "totalCount": 3
+    },
+    "app/api/auth/[...nextauth]/route.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/auth",
+          "line": 1
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/cabins/[cabinId]/not-found.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../../_components",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "../../_components/ui",
+          "line": 2
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 2,
+      "totalCount": 2
+    },
+    "app/cabins/[cabinId]/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_api/data-service",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "react",
+          "line": 4
+        },
+        {
+          "type": "external",
+          "path": "@/app/cabins/_components",
+          "line": 5
+        },
+        {
+          "type": "external",
+          "path": "@/app/_features/reservation",
+          "line": 6
+        }
+      ],
+      "externalCount": 5,
+      "internalCount": 0,
+      "totalCount": 5
+    },
+    "app/cabins/_components/Cabin.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/app/_components/",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_components/ui",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/solid",
+          "line": 3
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 4
+        }
+      ],
+      "externalCount": 4,
+      "internalCount": 0,
+      "totalCount": 4
+    },
+    "app/cabins/_components/CabinCard.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@heroicons/react/24/solid",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "../../_components/ui",
+          "line": 4
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 1,
+      "totalCount": 4
+    },
+    "app/cabins/_components/CabinFilter.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "../../_components/ui",
+          "line": 2
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 2,
+      "totalCount": 2
+    },
+    "app/cabins/_components/CabinList.jsx": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "../../_api/data-service",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "./",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next/cache",
+          "line": 3
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 2,
+      "totalCount": 3
+    },
+    "app/cabins/_components/FilterButton.jsx": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "next/navigation",
+          "line": 3
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 0,
+      "totalCount": 1
+    },
+    "app/cabins/_components/index.js": {
+      "dependencies": [],
+      "externalCount": 0,
+      "internalCount": 0,
+      "totalCount": 0
+    },
+    "app/cabins/loading.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./../_components/ui",
+          "line": 1
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 1,
+      "totalCount": 1
+    },
+    "app/cabins/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "react",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "../_components/ui",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "../_features/reservation/components",
+          "line": 3
+        },
+        {
+          "type": "internal",
+          "path": "./_components",
+          "line": 4
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 3,
+      "totalCount": 4
+    },
+    "app/error.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./_components/ui",
+          "line": 3
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 1,
+      "totalCount": 1
+    },
+    "app/layout.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./_components",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "@/app/_styles/globals.css",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next/font/google",
+          "line": 4
+        },
+        {
+          "type": "internal",
+          "path": "./_features/reservation",
+          "line": 5
+        }
+      ],
+      "externalCount": 2,
+      "internalCount": 2,
+      "totalCount": 4
+    },
+    "app/loading.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./_components/ui",
+          "line": 1
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 1,
+      "totalCount": 1
+    },
+    "app/login/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "react",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "../_components/ui",
+          "line": 2
+        },
+        {
+          "type": "internal",
+          "path": "../_features/auth/components/",
+          "line": 3
+        }
+      ],
+      "externalCount": 1,
+      "internalCount": 2,
+      "totalCount": 3
+    },
+    "app/not-found.js": {
+      "dependencies": [
+        {
+          "type": "internal",
+          "path": "./_components",
+          "line": 1
+        },
+        {
+          "type": "internal",
+          "path": "./_components/ui",
+          "line": 2
+        }
+      ],
+      "externalCount": 0,
+      "internalCount": 2,
+      "totalCount": 2
+    },
+    "app/page.js": {
+      "dependencies": [
+        {
+          "type": "external",
+          "path": "@/public/bg.png",
+          "line": 1
+        },
+        {
+          "type": "external",
+          "path": "next/image",
+          "line": 2
+        },
+        {
+          "type": "external",
+          "path": "next/link",
+          "line": 3
+        }
+      ],
+      "externalCount": 3,
+      "internalCount": 0,
+      "totalCount": 3
+    }
+  }
+}

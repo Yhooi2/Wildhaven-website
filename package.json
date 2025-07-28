@@ -8,7 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "analyze:deps": "madge --image deps.png app/",
+    "analyze:cycles": "madge --circular app/",
+    "graph:deps": "madge --image deps-graph.png --extensions js,jsx app/",
+    "analyze:detailed": "node scripts/analyze-dependencies.js",
+    "report:deps": "node scripts/generate-dependency-report.js",
+    "check:circular": "node scripts/check-circular-deps.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -16,7 +22,7 @@
     "@supabase/supabase-js": "^2.51.0",
     "date-fns": "^4.1.0",
     "mcp-shrimp-task-manager": "^1.0.21",
-    "next": "^15.4.2-canary.16",
+    "next": "^15.4.2-canary.18",
     "next-auth": "^5.0.0-beta.29",
     "react": "19.1.0",
     "react-day-picker": "^9.8.0",
@@ -27,6 +33,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.4.1",
     "eslint-plugin-tailwindcss": "^3.18.2",
+    "madge": "^6.0.0",
     "postcss": "^8",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.5.0",

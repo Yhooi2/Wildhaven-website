@@ -1,4 +1,4 @@
-function GuestSelector({ maxCapacity }) {
+export function GuestSelector({ maxCapacity }) {
   return (
     <div className="space-y-2">
       <label htmlFor="numGuests">How many guests?</label>
@@ -20,5 +20,3 @@ function GuestSelector({ maxCapacity }) {
     </div>
   );
 }
-
-export default GuestSelector;
