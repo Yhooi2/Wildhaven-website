@@ -10,7 +10,7 @@ export async function ReservationsList() {
     return <SectionHeading>You have no reservations</SectionHeading>;
   }
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex max-w-screen-md flex-col gap-6">
       {reservations.map((reservation) => (
         <ReservationCard key={reservation.id} reservation={reservation} />
       ))}
