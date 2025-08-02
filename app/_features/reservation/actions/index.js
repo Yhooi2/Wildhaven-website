@@ -1,3 +1,3 @@
 export { createReservations } from "./createReservations";
-export { deleteReservations } from "./deleteReservations";
+export { deleteReservation } from "./deleteReservation";
 export { updateReservations } from "./updateReservations";

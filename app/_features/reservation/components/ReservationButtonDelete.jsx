@@ -1,15 +1,14 @@
 "use client";
 
-import { deleteReservations } from "@/app/_features/reservation/actions";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { useTransition } from "react";
 
-export function ReservationButtonDelete({ id }) {
+export function ReservationButtonDelete({ id, onDelete }) {
   const [isPending, startTransition] = useTransition();
 
   function handleDelete() {
     if (!confirm("Please confirm deletion")) return;
-    startTransition(() => deleteReservations(id));
+    startTransition(() => onDelete(id));
   }
 
   return (

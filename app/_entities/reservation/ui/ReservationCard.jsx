@@ -7,7 +7,7 @@ import { ReservationStatus } from "@/app/_entities/reservation";
 import { ReservationButtonEdit } from "@/app/_features/reservation/components/ReservationButtonEdit";
 import { ReservationButtonDelete } from "@/app/_features/reservation/components/ReservationButtonDelete";
 
-export function ReservationCard({ reservation }) {
+export function ReservationCard({ reservation, onDelete }) {
   const {
     id,
     cabins,
@@ -48,7 +48,7 @@ export function ReservationCard({ reservation }) {
         {!isPast(new Date(startDate)) && (
           <>
             <ReservationButtonEdit id={id} />
-            <ReservationButtonDelete id={id} />
+            <ReservationButtonDelete id={id} onDelete={onDelete} />
           </>
         )}
       </div>

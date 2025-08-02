@@ -2,7 +2,7 @@
 import { SubmitFormButton } from "@/app/_components/ui/SubmitFormButton";
 import { useReservation } from "@/app/_features/reservation/context/useReservation";
 
-export function HiddenInputs({ bookingId, cabinId }) {
+export function ReservationFormSubmit({ bookingId, cabinId }) {
   const { range, setCabinId } = useReservation();
 
   if (!range || !range.startDate || !range.endDate) {

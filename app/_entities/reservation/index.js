@@ -1,3 +1,4 @@
 // Reservation Entity - Main Export
-export * from "./ui/index.js";
-export * from "./model/index.js";
+export { ReservationCard } from "./ui/ReservationCard";
+export { ReservationsList } from "./ui/ReservationsList";
+export { ReservationStatus } from "./ui/ReservationStatus";

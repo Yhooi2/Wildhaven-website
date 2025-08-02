@@ -1,19 +1,35 @@
-import { auth } from "@/app/_api/auth";
-import { getBookings } from "@/app/_api/data-service";
-import { SectionHeading } from "@/app/_components/ui";
+"use client";
 import { ReservationCard } from "@/app/_entities/reservation";
+import { SectionHeading } from "@/app/_components/ui";
+import { deleteReservation } from "@/app/_features/reservation/actions";
+import { useOptimistic } from "react";
 
-export async function ReservationsList() {
-  const session = await auth();
-  const reservations = await getBookings(session.user.id);
-  if (reservations.length === 0) {
+export function ReservationsList({ reservations }) {
+  const [optimisticList, setOptimisticList] = useOptimistic(
+    reservations,
+    (list, id) => {
+      return list.filter((reservation) => reservation.id !== id);
+    }
+  );
+
+  if (optimisticList.length === 0) {
     return <SectionHeading>You have no reservations</SectionHeading>;
   }
+
+  async function handleDelete(id) {
+    setOptimisticList(id);
+    await deleteReservation(id);
+  }
+
   return (
-    <div className="flex max-w-screen-md flex-col gap-6">
-      {reservations.map((reservation) => (
-        <ReservationCard key={reservation.id} reservation={reservation} />
+    <ul className="flex max-w-screen-md flex-col gap-6">
+      {optimisticList.map((reservation) => (
+        <ReservationCard
+          key={reservation.id}
+          reservation={reservation}
+          onDelete={handleDelete}
+        />
       ))}
-    </div>
+    </ul>
   );
 }
