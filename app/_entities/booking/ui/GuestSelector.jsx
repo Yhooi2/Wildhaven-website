@@ -1,4 +1,4 @@
-export function GuestSelector({ maxCapacity }) {
+export function GuestSelector({ maxCapacity, numGuests }) {
   return (
     <div className="space-y-2">
       <label htmlFor="numGuests">How many guests?</label>
@@ -7,6 +7,7 @@ export function GuestSelector({ maxCapacity }) {
         id="numGuests"
         className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm"
         required
+        defaultValue={numGuests || ""}
       >
         <option value="" key="">
           Select number of guests...

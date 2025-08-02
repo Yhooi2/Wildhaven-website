@@ -9,7 +9,7 @@ export const DAY_PICKER_CLASS_NAMES = {
   month_grid: "",
   chevron: "fill-primary-100",
   root: "flex flex-col min-w-max",
-  months: "grid grid-cols-2  gap-2",
+  months: "grid grid-cols-1 @lg:grid-cols-2 gap-2",
   month: "flex flex-col items-center",
 };
 

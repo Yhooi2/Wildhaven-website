@@ -1,5 +1,5 @@
 export function ClearButton({ range, onClear }) {
-  if (!range.from && !range.to) return null;
+  if (!range.startDate && !range.endDate) return null;
 
   return (
     <button

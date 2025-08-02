@@ -28,7 +28,10 @@ async function Page({ params }) {
   return (
     <div className="mx-auto mt-8 max-w-6xl">
       <CabinDetails cabin={cabin} />
-      <div>
+      <div
+        style={{ containerType: "inline-size" }}
+        className="mx-auto max-w-xl @container xl:max-w-none"
+      >
         <SectionHeading className="text-center !text-5xl">
           Reserve {cabin.name} today. Pay on arrival.
         </SectionHeading>

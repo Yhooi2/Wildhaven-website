@@ -1,6 +1,12 @@
 "use client";
 import { useReservation } from "@/app/_features/reservation/context";
-import { addMonths, differenceInDays } from "date-fns";
+import {
+  addMonths,
+  differenceInDays,
+  isBefore,
+  isAfter,
+  isSameDay,
+} from "date-fns";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
@@ -17,15 +23,31 @@ export function DateSelector({
   maxBookingLength,
   bookedDates,
   cabin,
+  booking,
 }) {
   const { range, setRange, resetRange, setCabinId } = useReservation();
+  let bookedDatesFiltered = bookedDates;
+
+  if (booking) {
+    bookedDatesFiltered = bookedDates.filter(
+      (date) =>
+        (isBefore(date, booking.startDate) &&
+          !isSameDay(date, booking.startDate)) ||
+        (isAfter(date, booking.endDate) && !isSameDay(date, booking.endDate))
+    );
+  }
 
   const numNights =
-    range?.from && range?.to ? differenceInDays(range.to, range.from) : 0;
+    range?.startDate && range?.endDate
+      ? differenceInDays(range.endDate, range.startDate)
+      : 0;
   const pricing = calculatePricing(cabin, numNights);
 
   const handleSelect = (range) => {
-    setRange(range);
+    setRange({
+      startDate: range.from,
+      endDate: range.to,
+    });
     setCabinId(cabin.id);
   };
 
@@ -37,9 +59,12 @@ export function DateSelector({
         min={minBookingLength}
         max={maxBookingLength}
         excludeDisabled={true}
-        selected={range}
+        selected={{
+          from: range.startDate,
+          to: range.endDate,
+        }}
         onSelect={handleSelect}
-        disabled={[{ before: new Date() }, ...bookedDates]}
+        disabled={[{ before: new Date() }, ...bookedDatesFiltered]}
         captionLayout="dropdown"
         numberOfMonths={2}
         hideNavigation
@@ -47,7 +72,7 @@ export function DateSelector({
         endMonth={addMonths(new Date(), 12)}
         classNames={DAY_PICKER_CLASS_NAMES}
         modifiers={{
-          booked: bookedDates,
+          booked: bookedDatesFiltered,
         }}
         modifiersClassNames={MODIFIERS_CLASS_NAMES}
       />

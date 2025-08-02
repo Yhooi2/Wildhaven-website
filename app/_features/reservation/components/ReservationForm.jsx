@@ -1,7 +1,13 @@
-import { Button } from "@/app/_components/ui";
-import { AuthHeader } from "@/app/_features/auth";
 import { GuestSelector } from "@/app/_entities/booking";
-export async function ReservationForm({ maxCapacity }) {
+import { AuthHeader } from "@/app/_features/auth";
+import {
+  createReservations,
+  updateReservations,
+} from "@/app/_features/reservation/actions";
+import { ReservationFormSubmit } from "./ReservationFormSubmit";
+
+export function ReservationForm({ maxCapacity, booking, cabinId }) {
+  const isEdit = !!booking;
   return (
     <div>
       <div className="flex items-center justify-between gap-4 bg-primary-800 px-16 py-3 text-primary-300">
@@ -9,13 +15,20 @@ export async function ReservationForm({ maxCapacity }) {
         <AuthHeader withName={true} />
       </div>
 
-      <form className="flex flex-col justify-between gap-5 bg-primary-900 px-16 py-10">
-        <GuestSelector maxCapacity={maxCapacity} />
+      <form
+        action={isEdit ? updateReservations : createReservations}
+        className="flex flex-col justify-between gap-5 bg-primary-900 px-16 py-10"
+      >
+        <GuestSelector
+          maxCapacity={maxCapacity}
+          numGuests={booking?.numGuests}
+        />
         <div className="space-y-2">
           <label htmlFor="observations">
             Anything we should know about your stay?
           </label>
           <textarea
+            defaultValue={isEdit ? booking.observations : ""}
             name="observations"
             id="observations"
             className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm"
@@ -24,8 +37,10 @@ export async function ReservationForm({ maxCapacity }) {
         </div>
 
         <div className="flex items-center justify-end gap-6">
-          <p className="text-base text-primary-300">Start by selecting dates</p>
-          <Button>Reserve now</Button>
+          <ReservationFormSubmit
+            bookingId={isEdit ? booking.id : null}
+            cabinId={cabinId}
+          />
         </div>
       </form>
     </div>

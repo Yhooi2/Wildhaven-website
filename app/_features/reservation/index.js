@@ -7,6 +7,7 @@ export {
   ReservationRemainder,
   ReservationButtonDelete,
   ReservationButtonEdit,
+  ReservationEdit,
   ClearButton,
 } from "./components";
 export { ReservationProvider, useReservation } from "./context";
