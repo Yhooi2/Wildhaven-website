@@ -3,6 +3,7 @@ import "@/app/_styles/globals.css";
 
 import { Josefin_Sans } from "next/font/google";
 import { ReservationProvider } from "@/app/_features/reservation";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -31,7 +32,10 @@ function RootLayout({ children }) {
         <Header />
         <div className="grid flex-1 px-8 py-12">
           <ReservationProvider>
-            <main className="mx-auto w-full max-w-7xl">{children}</main>
+            <main className="mx-auto w-full max-w-7xl">
+              {children}
+              <SpeedInsights />
+            </main>
           </ReservationProvider>
         </div>
       </body>
