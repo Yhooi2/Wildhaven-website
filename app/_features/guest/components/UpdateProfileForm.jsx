@@ -1,9 +1,8 @@
-"use client";
-import { Button, Input } from "@/app/_components/ui";
+import { Input } from "@/app/_components/ui";
 import { updateProfile } from "@/app/_features/guest/actions";
-import { useFormStatus } from "react-dom";
+import { SubmitFormButton } from "@/app/_components/ui/SubmitFormButton";
 
-function UpdateProfileForm({ children, guest }) {
+export function UpdateProfileForm({ children, guest }) {
   const { fullName, email, nationalID } = guest;
 
   return (
@@ -29,20 +28,16 @@ function UpdateProfileForm({ children, guest }) {
         defaultValue={nationalID}
         name="nationalID"
       />
-      <FormButton />
+      <SubmitFormButton
+        pendingLabel={
+          <div className="flex items-center justify-center gap-4">
+            <div className="size-4 animate-spin rounded-full border-y-2 border-primary-300"></div>
+            <span>Updating...</span>
+          </div>
+        }
+      >
+        Update profile
+      </SubmitFormButton>
     </form>
-  );
-}
-
-export { UpdateProfileForm };
-
-function FormButton() {
-  const { pending } = useFormStatus();
-  return (
-    <div className="flex justify-end">
-      <Button disabled={pending}>
-        {pending ? "Updating..." : "Update profile"}
-      </Button>
-    </div>
   );
 }

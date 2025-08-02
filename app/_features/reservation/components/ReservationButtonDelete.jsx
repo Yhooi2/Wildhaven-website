@@ -1,6 +1,5 @@
 "use client";
 
-import { SpinnerMini } from "@/app/_components/ui";
 import { deleteReservations } from "@/app/_features/reservation/actions";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { useTransition } from "react";

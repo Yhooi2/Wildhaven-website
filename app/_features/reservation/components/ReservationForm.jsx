@@ -4,7 +4,7 @@ import {
   createReservations,
   updateReservations,
 } from "@/app/_features/reservation/actions";
-import { ReservationFormSubmit } from "./ReservationFormSubmit";
+import { ReservationFormSubmit } from "./legasy_ReservationFormSubmit";
 
 export function ReservationForm({ maxCapacity, booking, cabinId }) {
   const isEdit = !!booking;
