@@ -14,7 +14,7 @@ export function CabinDetails({ cabin }) {
           alt={`${cabin.name} image`}
           fill
           priority
-          quality={90}
+          quality={75}
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

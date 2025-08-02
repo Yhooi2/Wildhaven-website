@@ -13,7 +13,7 @@ export async function ReservationWidget({ cabin, booking }) {
   return (
     <Container
       style={{ containerType: "inline-size" }}
-      className="grid min-h-96 max-w-xl grid-cols-1 @container xl:max-w-none"
+      className="grid min-h-96 grid-cols-1 @container xl:max-w-none"
     >
       <div className="grid  grid-cols-1 gap-4 @4xl:grid-cols-2">
         <DateSelector

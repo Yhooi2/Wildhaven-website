@@ -12,7 +12,7 @@ async function Page({ params }) {
   const { bookingId } = await params;
 
   return (
-    <div>
+    <div className="max-w-xl xl:max-w-none">
       <SectionHeading>Edit reservation #{bookingId}</SectionHeading>
       <Suspense fallback={<Spinner />}>
         <ReservationEdit bookingId={bookingId} />

@@ -1,7 +1,6 @@
 "use server";
 
 import { getCabin } from "@/app/_api/data-service";
-import { calculatePricing } from "@/app/_entities/booking/model/booking-utils";
 import { validateGuest } from "@/app/_features/reservation/utils";
 import { differenceInDays } from "date-fns";
 
@@ -16,7 +15,7 @@ export async function prepareReservationsData(
   const startDate = new Date(formData.get("startDate"));
   const endDate = new Date(formData.get("endDate"));
   const cabinId = formData.get("cabinId");
-  const numGuests = formData.get("numGuests");
+  const numGuests = Number(formData.get("numGuests"));
   const observations = formData.get("observations").slice(0, 1000);
 
   // Validate required fields
@@ -29,7 +28,8 @@ export async function prepareReservationsData(
   // Fetch cabin and calculate booking details
   const cabin = await getCabin(cabinId);
   const numNights = differenceInDays(new Date(endDate), new Date(startDate));
-  const { totalPrice } = calculatePricing(cabin, numNights);
+  const { regularPrice: cabinPrice } = cabin;
+  const totalPrice = cabinPrice * numNights;
 
   // Return booking data
   return {
@@ -42,6 +42,7 @@ export async function prepareReservationsData(
       guestId,
       totalPrice,
       numNights,
+      cabinPrice,
     },
     bookingId,
   };

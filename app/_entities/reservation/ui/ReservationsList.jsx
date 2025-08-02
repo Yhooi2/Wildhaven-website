@@ -1,6 +1,6 @@
 "use client";
 import { ReservationCard } from "@/app/_entities/reservation";
-import { SectionHeading } from "@/app/_components/ui";
+import { Text } from "@/app/_components/ui";
 import { deleteReservation } from "@/app/_features/reservation/actions";
 import { useOptimistic } from "react";
 
@@ -13,7 +13,7 @@ export function ReservationsList({ reservations }) {
   );
 
   if (optimisticList.length === 0) {
-    return <SectionHeading>You have no reservations</SectionHeading>;
+    return <Text>You don&apos;t have any reservations yet</Text>;
   }
 
   async function handleDelete(id) {

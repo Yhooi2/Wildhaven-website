@@ -4,13 +4,13 @@ import {
   createReservations,
   updateReservations,
 } from "@/app/_features/reservation/actions";
-import { ReservationFormSubmit } from "./legasy_ReservationFormSubmit";
+import { ReservationFormSubmit } from "@/app/_features/reservation/components/ReservationFormSubmit";
 
 export function ReservationForm({ maxCapacity, booking, cabinId }) {
   const isEdit = !!booking;
   return (
     <div>
-      <div className="flex items-center justify-between gap-4 bg-primary-800 px-16 py-3 text-primary-300">
+      <div className="flex items-center justify-between gap-4 bg-primary-800 px-16 py-3 text-primary-300 ">
         <p>Logged in as</p>
         <AuthHeader withName={true} />
       </div>

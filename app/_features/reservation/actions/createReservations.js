@@ -7,7 +7,14 @@ import { redirect } from "next/navigation";
 
 export async function createReservations(formData) {
   const { bookingData } = await prepareReservationsData(formData);
-  await createBooking(bookingData);
+  console.log(bookingData);
+  await createBooking({
+    ...bookingData,
+    extrasPrice: 0,
+    status: "unconfirmed",
+    hasBreakfast: false,
+    isPaid: false,
+  });
   revalidatePath("/");
   redirect("/cabins");
 }

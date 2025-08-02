@@ -13,13 +13,11 @@ import { isWithinInterval } from "date-fns";
  */
 export function calculatePricing(cabin, numNights) {
   const regularPrice = cabin?.regularPrice || 0;
-  const discount = cabin?.discount || 0;
-  const nightlyPrice = regularPrice - discount;
+  const nightlyPrice = regularPrice;
   const totalPrice = numNights * nightlyPrice;
 
   return {
     regularPrice,
-    discount,
     nightlyPrice,
     totalPrice,
   };

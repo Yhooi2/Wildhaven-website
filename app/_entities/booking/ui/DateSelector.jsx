@@ -18,6 +18,20 @@ import { PriceDisplay, BookingSummary } from "@/app/_entities/booking";
 import { ClearButton } from "@/app/_features/reservation/components/ui";
 import { calculatePricing } from "@/app/_entities/booking";
 
+function isDisabledRange(range, disabledDates) {
+  return (
+    range.startDate &&
+    range.endDate &&
+    disabledDates.some(
+      (date) =>
+        isSameDay(date, range.startDate) ||
+        isSameDay(date, range.endDate) ||
+        (isAfter(date, range.startDate) && isBefore(date, range.endDate)) ||
+        (isBefore(date, range.startDate) && isAfter(date, range.endDate))
+    )
+  );
+}
+
 export function DateSelector({
   minBookingLength,
   maxBookingLength,
@@ -36,6 +50,12 @@ export function DateSelector({
         (isAfter(date, booking.endDate) && !isSameDay(date, booking.endDate))
     );
   }
+  const disabledRange = isDisabledRange(range, bookedDatesFiltered)
+    ? {}
+    : {
+        from: range.startDate,
+        to: range.endDate,
+      };
 
   const numNights =
     range?.startDate && range?.endDate
@@ -59,10 +79,7 @@ export function DateSelector({
         min={minBookingLength}
         max={maxBookingLength}
         excludeDisabled={true}
-        selected={{
-          from: range.startDate,
-          to: range.endDate,
-        }}
+        selected={disabledRange}
         onSelect={handleSelect}
         disabled={[{ before: new Date() }, ...bookedDatesFiltered]}
         captionLayout="dropdown"

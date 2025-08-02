@@ -27,7 +27,7 @@ export function ReservationFormSubmit({ bookingId, cabinId }) {
               <span>Updating...</span>
             </div>
           ) : (
-            <div className="flex items-center gap-1">
+            <div className="flex items-center justify-center gap-1">
               <div className="size-4 animate-spin rounded-full border-y-2 border-primary-300"></div>
               <span>Reserving...</span>
             </div>
