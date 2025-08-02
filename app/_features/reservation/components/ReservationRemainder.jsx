@@ -7,10 +7,10 @@ import { Icon } from "@/app/_components/ui";
 import Link from "next/link";
 
 export function ReservationRemainder() {
-  const { range, resetRange, cabinId, isUpdating } = useReservation();
+  const { range, resetRange, cabinId } = useReservation();
   const { startDate, endDate } = range;
 
-  if (!startDate || !endDate || !cabinId || isUpdating) return null;
+  if (!startDate || !endDate || !cabinId) return null;
 
   return (
     <div className="fixed bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-8 rounded-full bg-accent-400 px-8 py-5 text-lg font-semibold text-primary-800 shadow-xl shadow-slate-900">

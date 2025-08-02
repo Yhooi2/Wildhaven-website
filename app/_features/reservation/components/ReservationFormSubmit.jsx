@@ -5,18 +5,19 @@ import { useState } from "react";
 
 export function ReservationFormSubmit({ bookingId, cabinId }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { range, setIsUpdating } = useReservation();
+  const { range, setCabinId, resetRange } = useReservation();
 
-  if (!range || !range.startDate || !range.endDate) {
+  if ((!range || !range.startDate || !range.endDate) && !isSubmitting) {
     return (
       <p className="text-base text-primary-300">Start by selecting dates</p>
     );
   }
   const handleSubmit = () => {
+    setCabinId(null);
     setTimeout(() => {
       setIsSubmitting(true);
-      setIsUpdating(true);
     }, 50);
+
     setTimeout(() => {
       setIsSubmitting(false);
     }, 10000);

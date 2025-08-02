@@ -9,15 +9,17 @@ const initialState = {
   endDate: undefined,
 };
 
-export function ReservationProvider({ children, initialBooking }) {
+export function ReservationProvider({ children, initialBooking = {} }) {
   const [range, setRange] = useState(
     initialBooking && initialBooking.startDate && initialBooking.endDate
       ? initialBooking
       : initialState
   );
   const [cabinId, setCabinId] = useState(null);
-  const resetRange = () => setRange(initialState);
-  const [isUpdating, setIsUpdating] = useState(!!initialBooking);
+  const resetRange = () => {
+    setRange(initialState);
+    setCabinId(null);
+  };
 
   return (
     <ReservationContext.Provider
@@ -27,8 +29,6 @@ export function ReservationProvider({ children, initialBooking }) {
         resetRange,
         cabinId,
         setCabinId,
-        isUpdating,
-        setIsUpdating,
       }}
     >
       {children}

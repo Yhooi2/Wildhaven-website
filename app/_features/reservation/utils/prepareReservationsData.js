@@ -1,8 +1,8 @@
 "use server";
 
-import { auth } from "@/app/_api/auth";
 import { getCabin } from "@/app/_api/data-service";
 import { calculatePricing } from "@/app/_entities/booking/model/booking-utils";
+import { validateGuest } from "@/app/_features/reservation/utils";
 import { differenceInDays } from "date-fns";
 
 export async function prepareReservationsData(
@@ -10,9 +10,7 @@ export async function prepareReservationsData(
   requireBookingId = false
 ) {
   // Authenticate user
-  const session = await auth();
-  if (!session || !session.user) throw new Error("You must be logged in");
-
+  const guestId = Number(await validateGuest());
   // Extract form data
   const bookingId = formData.get("bookingId");
   const startDate = new Date(formData.get("startDate"));
@@ -20,7 +18,6 @@ export async function prepareReservationsData(
   const cabinId = formData.get("cabinId");
   const numGuests = formData.get("numGuests");
   const observations = formData.get("observations");
-  const guestId = Number(session.user.id);
 
   // Validate required fields
   const requiredFields = [startDate, endDate, cabinId, numGuests];

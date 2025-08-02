@@ -20,7 +20,7 @@ export function ReservationButtonDelete({ id }) {
     >
       {isPending ? (
         <div className="mx-auto flex items-center justify-center">
-          <div className="size-4 animate-spin rounded-full border-y-2 border-primary-300"></div>
+          <div className="size-6 animate-spin rounded-full border-y-2 border-primary-300"></div>
         </div>
       ) : (
         <>

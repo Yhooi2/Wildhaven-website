@@ -13,7 +13,7 @@ async function Page({ params }) {
 
   return (
     <div>
-      <SectionHeading>Edit reservation {bookingId}</SectionHeading>
+      <SectionHeading>Edit reservation #{bookingId}</SectionHeading>
       <Suspense fallback={<Spinner />}>
         <ReservationEdit bookingId={bookingId} />
       </Suspense>
