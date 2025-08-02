@@ -17,7 +17,7 @@ export async function prepareReservationsData(
   const endDate = new Date(formData.get("endDate"));
   const cabinId = formData.get("cabinId");
   const numGuests = formData.get("numGuests");
-  const observations = formData.get("observations");
+  const observations = formData.get("observations").slice(0, 1000);
 
   // Validate required fields
   const requiredFields = [startDate, endDate, cabinId, numGuests];

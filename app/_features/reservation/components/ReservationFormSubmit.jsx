@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export function ReservationFormSubmit({ bookingId, cabinId }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { range, setCabinId, resetRange } = useReservation();
+  const { range, setCabinId } = useReservation();
 
   if ((!range || !range.startDate || !range.endDate) && !isSubmitting) {
     return (

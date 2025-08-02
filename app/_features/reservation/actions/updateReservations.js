@@ -11,6 +11,7 @@ export async function updateReservations(formData) {
     true
   );
 
+  //  Authorization
   const bookings = await getBookings(bookingData.guestId);
   const bookingToUpdate = bookings.find(
     (booking) => booking.id === Number(bookingId)
