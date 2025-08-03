@@ -9,7 +9,7 @@ const styleLi = "transition-colors hover:text-accent-400";
 function Navigation() {
   return (
     <nav className="z-10 text-xl">
-      <ul className="flex items-center gap-16">
+      <ul className="flex items-center gap-3 md:gap-16">
         <li className={styleLi}>
           <Link href="/cabins ">Cabins</Link>
         </li>
@@ -18,15 +18,14 @@ function Navigation() {
           <Link href="/about ">About</Link>
         </li>
         <li className={styleLi}>
-          <Link
-            href="/account"
-            className={styleLi + " flex items-center gap-4"}
-          >
-            <Suspense>
+          <Suspense>
+            <Link
+              href="/account"
+              className={styleLi + " flex items-center justify-center gap-4"}
+            >
               <AuthHeader />
-            </Suspense>
-            <span className="hidden md:block">Guest area</span>
-          </Link>
+            </Link>
+          </Suspense>
         </li>
       </ul>
     </nav>
